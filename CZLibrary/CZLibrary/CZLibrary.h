@@ -9,7 +9,7 @@
 #ifndef CZLibrary_h
 #define CZLibrary_h
 
-#import @"TestView.h"
+#import "TestView.h"
 
 
 #endif /* CZLibrary_h */
