@@ -1,13 +1,15 @@
 //
-//  TestView.m
+//  CZLibrary.h
 //  CZLibrary
 //
 //  Created by juyiwei on 2018/9/19.
 //  Copyright © 2018 居祎炜. All rights reserved.
 //
 
-#import "TestView.h"
+#ifndef CZLibrary_h
+#define CZLibrary_h
 
-@implementation TestView
+#import "CZFoundationHeader.h"
 
-@end
+
+#endif /* CZLibrary_h */

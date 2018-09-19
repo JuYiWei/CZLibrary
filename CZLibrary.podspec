@@ -13,10 +13,19 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git", :tag => "#{s.version}" }
 
-  s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "CZLibrary/CZLibrary/CZLibrary.h"
+  s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}"
+
+  s.subspec 'Category' do |ss1|
+    ss1.subspec 'UIKit' do |sss1|
+      sss1.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/UIKit/*.{h,m}"
+    end
+    ss1.subspec 'Foundation' do |sss2|
+      sss2.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/Foundation/*.{h,m}"
+    end
+  end
+
+  # s.exclude_files = "Classes/Exclude"
 
   # s.resources = "Resources/*.png"
 
