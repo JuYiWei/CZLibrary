@@ -3,16 +3,11 @@ Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
   s.version      = "0.0.1"
-  s.summary      = "A short description of CZLibrary."
-
-  s.description  = <<-DESC
-                   DESC
-
+  s.summary      = "cz self library"
+  s.description  = "cz self library"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
-
   s.license      = "MIT"
-
-  s.author             = { "juyw" => "757832801@qq.com" }
+  s.author       = { "juyw" => "757832801@qq.com" }
 
   s.platform     = :ios, "9.0"
 

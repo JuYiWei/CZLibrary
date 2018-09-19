@@ -54,6 +54,7 @@
 		84B009F421524B2500D3697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B00A0121524BC800D3697D /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		84B00A0221524BC800D3697D /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		84B00A0421524D3900D3697D /* CZLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZLibrary.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		84B009CD21524B2300D3697D /* CZLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				84B00A0421524D3900D3697D /* CZLibrary.h */,
 				84B00A0021524BB600D3697D /* Lbirary */,
 				84B009CE21524B2300D3697D /* AppDelegate.h */,
 				84B009CF21524B2300D3697D /* AppDelegate.m */,
