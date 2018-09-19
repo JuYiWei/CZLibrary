@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git", :tag => "#{s.version}" }
 
-  s.source_files  = "CZLibrary", "CZLibrary/Lbirary/*.{h,m}"
+  s.source_files  = "CZLibrary/Lbirary/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   s.public_header_files = "CZLibrary/CZLibrary.h"
 
-  s.resources = "Resources/*.png"
+  # s.resources = "Resources/*.png"
 
   s.requires_arc = true
 
