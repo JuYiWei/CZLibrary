@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "CZLibrary/CZLibrary/CZLibrary/CZLibrary.h"
+  s.public_header_files = "CZLibrary/CZLibrary/CZLibrary.h"
 
   # s.resources = "Resources/*.png"
 
