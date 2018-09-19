@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
 
   # s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git", :tag => "#{s.version}" }
-  s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git" }
 
   s.source_files  = "CZLibrary/Lbirary/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
