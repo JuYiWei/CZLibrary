@@ -7,10 +7,10 @@
 //
 
 #import "CZHUD.h"
-#import "UIColor+cz.h"
-#import "NSString+cz.h"
-#import "UIView+cz.h"
-#import "UIWindow+cz.h"
+#import "../Category/UIKit/UIColor+cz.h"
+#import "../Category/UIKit/UIView+cz.h"
+#import "../Category/UIKit/UIWindow+cz.h"
+#import "../Category/Foundation/NSString+cz.h"
 
 CGFloat const CZHUD_HEIGHT = 76;
 CGFloat const CZHUD_PADDING = 16;
