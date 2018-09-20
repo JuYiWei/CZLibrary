@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CZLibraryMacro.h"
 
 typedef NS_ENUM(NSInteger, CZDateToolType) {
     
@@ -67,7 +66,7 @@ typedef NS_ENUM(NSInteger, CZDateToolType) {
 /*! 时间格式化工具，使用单例，因为格式化部分创建消耗较大，使用单例仅创建一次，提高性能 */
 @interface CZDateTransform : NSObject
 
-CZ_SINGLETON_HEADER(CZDateTransform)
++ (instancetype)sharedInstance;
 
 
 #pragma mark - General transform

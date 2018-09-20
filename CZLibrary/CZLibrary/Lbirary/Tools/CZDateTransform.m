@@ -39,9 +39,14 @@
 
 @implementation CZDateTransform
 
-CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
-
-
+static CZDateTransform *singleton;
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        singleton = [[CZDateTransform alloc] init];
+    });
+    return singleton;
+}
 
 #pragma mark - General transform
 
