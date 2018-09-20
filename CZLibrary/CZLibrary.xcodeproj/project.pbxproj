@@ -219,6 +219,7 @@
 		84B009CD21524B2300D3697D /* CZLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				84B00A6F21533DFE00D3697D /* Store */,
 				84B00A0021524BB600D3697D /* Lbirary */,
 				84B009CE21524B2300D3697D /* AppDelegate.h */,
 				84B009CF21524B2300D3697D /* AppDelegate.m */,
@@ -258,7 +259,6 @@
 				84B00A252153341100D3697D /* CZLibraryMacro.h */,
 				84B00A65215334B100D3697D /* Assets */,
 				84B00A052152565700D3697D /* Category */,
-				84B00A522153346200D3697D /* Main */,
 				84B00A262153343400D3697D /* Tools */,
 				84B00A332153344700D3697D /* UI */,
 			);
@@ -316,8 +316,6 @@
 				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
 				84B00A2A2153343400D3697D /* CZDateTransform.h */,
 				84B00A2D2153343400D3697D /* CZDateTransform.m */,
-				84B00A272153343400D3697D /* CZLog.h */,
-				84B00A2B2153343400D3697D /* CZLog.m */,
 				84B00A2C2153343400D3697D /* CZRandom.h */,
 				84B00A282153343400D3697D /* CZRandom.m */,
 			);
@@ -327,10 +325,7 @@
 		84B00A332153344700D3697D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A68215337C900D3697D /* Base */,
 				84B00A672153374F00D3697D /* CZUIHeader.h */,
-				84B00A392153345600D3697D /* CZHUD.h */,
-				84B00A382153345600D3697D /* CZHUD.m */,
 				84B00A342153344700D3697D /* CZOnePixelView.h */,
 				84B00A352153344700D3697D /* CZOnePixelView.m */,
 			);
@@ -381,6 +376,19 @@
 				84B00A69215337C900D3697D /* CZBaseView.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		84B00A6F21533DFE00D3697D /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A392153345600D3697D /* CZHUD.h */,
+				84B00A382153345600D3697D /* CZHUD.m */,
+				84B00A68215337C900D3697D /* Base */,
+				84B00A522153346200D3697D /* Main */,
+				84B00A272153343400D3697D /* CZLog.h */,
+				84B00A2B2153343400D3697D /* CZLog.m */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -768,10 +776,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibrary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -783,10 +795,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibrary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -797,7 +813,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -812,7 +832,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -826,7 +850,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -840,7 +868,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

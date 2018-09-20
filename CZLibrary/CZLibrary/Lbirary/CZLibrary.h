@@ -9,6 +9,7 @@
 #ifndef CZLibrary_h
 #define CZLibrary_h
 
+#import "CZLibraryMacro.h"
 #import "CZFoundationHeader.h"
 #import "CZUIKitHeader.h"
 #import "CZToolsHeader.h"

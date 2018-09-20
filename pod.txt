@@ -1,0 +1,6 @@
+
+
+pod spec lint CZLibrary.podspec
+
+
+pod trunk push CZLibrary.podspec
