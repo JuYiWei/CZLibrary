@@ -8,7 +8,6 @@
 
 #import "SVProgressHUD.h"
 #import "MBProgressHUD.h"
-#import "CZLibraryMacro.h"
 
 @interface CZHUD : SVProgressHUD
 
@@ -17,7 +16,8 @@
 
 
 
-CZ_SINGLETON_HEADER(CZHUD)
+
++ (instancetype)sharedInstance;
 
 /*! 纯文本，指定 view */
 - (void)showMessage:(NSString *)message inView:(UIView *)view;

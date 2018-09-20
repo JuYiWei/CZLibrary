@@ -57,7 +57,14 @@ CGFloat const CZHUD_PADDING = 16;
 
 #pragma mark - MBP HUD
 
-CZ_SINGLETON_IMPLEMENTATION(CZHUD)
+static CZHUD *singleton;
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        singleton = [[CZHUD alloc] init];
+    });
+    return singleton;
+}
 
 - (instancetype)init {
     self = [super init];
@@ -104,7 +111,7 @@ CZ_SINGLETON_IMPLEMENTATION(CZHUD)
 - (void)showInfoMessage:(NSString *)message inView:(UIView *)view {
     UIFont *messageFont = [UIFont systemFontOfSize:16];
     CGFloat messageWidth = [message cz_rectWithFont:messageFont].size.width;
-    UIImage *iconImage = [UIImage imageNamed:@"general_alert_info"];
+    UIImage *iconImage = [UIImage imageNamed:@"hud_loading_01"];
     CGFloat iconImageWidth = iconImage.size.width;
     CGFloat iconImageHeight = iconImage.size.height;
     

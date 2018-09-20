@@ -1,6 +1,9 @@
 
 
 pod spec lint CZLibrary.podspec
-
-
 pod trunk push CZLibrary.podspec
+
+
+
+pod spec lint CZLibrary.podspec --use-libraries
+pod trunk push CZLibrary.podspec --use-libraries

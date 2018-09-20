@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "cz self library summary"
   s.description  = "cz self library description"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
@@ -39,10 +39,10 @@ Pod::Spec.new do |s|
   
 
 #ui
-  s.dependency 'Masonry', '~> 1.0'
+  # s.dependency 'Masonry', '~> 1.0'
   #s.dependency 'SDWebImage', '~> 4.0'
-  #s.dependency 'SVProgressHUD', '~> 2.0'
-  #s.dependency 'MBProgressHUD', '~> 1.1'
+  s.dependency 'SVProgressHUD', '~> 2.0'
+  s.dependency 'MBProgressHUD', '~> 1.1'
   #s.dependency 'MJRefresh', '~> 3.0'
   #s.dependency 'DZNEmptyDataSet', '~> 1.8'
 

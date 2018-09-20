@@ -9,8 +9,7 @@
 #ifndef CZUIHeader_h
 #define CZUIHeader_h
 
-
 #import "CZOnePixelView.h"
-
+#import "CZHUD.h"
 
 #endif /* CZUIHeader_h */
