@@ -25,4 +25,9 @@
 }
 
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [[CZHUD sharedInstance] showMessage:@"123"];
+}
+
+
 @end

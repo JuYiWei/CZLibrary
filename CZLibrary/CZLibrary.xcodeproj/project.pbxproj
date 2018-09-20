@@ -255,12 +255,12 @@
 		84B00A0021524BB600D3697D /* Lbirary */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A7321534CA700D3697D /* Category */,
-				84B00A7221534B5800D3697D /* UI */,
-				84B00A7121534AFE00D3697D /* Tools */,
 				84B00A0421524D3900D3697D /* CZLibrary.h */,
 				84B00A252153341100D3697D /* CZLibraryMacro.h */,
 				84B00A65215334B100D3697D /* Assets */,
+				84B00A85215350BB00D3697D /* UI */,
+				84B00A802153507100D3697D /* Tools */,
+				84B00A7E2153501000D3697D /* Category */,
 			);
 			path = Lbirary;
 			sourceTree = "<group>";
@@ -320,42 +320,9 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
-		84B00A7121534AFE00D3697D /* Tools */ = {
+		84B00A7E2153501000D3697D /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A662153370000D3697D /* CZToolsHeader.h */,
-				84B00A292153343400D3697D /* CZAdaptTool.h */,
-				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
-				84B00A2A2153343400D3697D /* CZDateTransform.h */,
-				84B00A2D2153343400D3697D /* CZDateTransform.m */,
-				84B00A272153343400D3697D /* CZLog.h */,
-				84B00A2B2153343400D3697D /* CZLog.m */,
-				84B00A2C2153343400D3697D /* CZRandom.h */,
-				84B00A282153343400D3697D /* CZRandom.m */,
-			);
-			name = Tools;
-			sourceTree = "<group>";
-		};
-		84B00A7221534B5800D3697D /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				84B00A672153374F00D3697D /* CZUIHeader.h */,
-				84B00A392153345600D3697D /* CZHUD.h */,
-				84B00A382153345600D3697D /* CZHUD.m */,
-				84B00A342153344700D3697D /* CZOnePixelView.h */,
-				84B00A352153344700D3697D /* CZOnePixelView.m */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		84B00A7321534CA700D3697D /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				84B00A092152568200D3697D /* CZFoundationHeader.h */,
-				84B00A082152568200D3697D /* NSMutableDictionary+cz.h */,
-				84B00A0B2152568200D3697D /* NSMutableDictionary+cz.m */,
-				84B00A072152568200D3697D /* NSString+cz.h */,
-				84B00A0A2152568200D3697D /* NSString+cz.m */,
 				84B00A102152580E00D3697D /* CZUIKitHeader.h */,
 				84B00A112152580E00D3697D /* UIColor+cz.h */,
 				84B00A182152580E00D3697D /* UIColor+cz.m */,
@@ -371,8 +338,41 @@
 				84B00A1D2152580E00D3697D /* UIView+cz.h */,
 				84B00A122152580E00D3697D /* UIWindow+cz.h */,
 				84B00A172152580E00D3697D /* UIWindow+cz.m */,
+				84B00A092152568200D3697D /* CZFoundationHeader.h */,
+				84B00A082152568200D3697D /* NSMutableDictionary+cz.h */,
+				84B00A0B2152568200D3697D /* NSMutableDictionary+cz.m */,
+				84B00A072152568200D3697D /* NSString+cz.h */,
+				84B00A0A2152568200D3697D /* NSString+cz.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		84B00A802153507100D3697D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A662153370000D3697D /* CZToolsHeader.h */,
+				84B00A292153343400D3697D /* CZAdaptTool.h */,
+				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
+				84B00A2A2153343400D3697D /* CZDateTransform.h */,
+				84B00A2D2153343400D3697D /* CZDateTransform.m */,
+				84B00A272153343400D3697D /* CZLog.h */,
+				84B00A2B2153343400D3697D /* CZLog.m */,
+				84B00A2C2153343400D3697D /* CZRandom.h */,
+				84B00A282153343400D3697D /* CZRandom.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		84B00A85215350BB00D3697D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A672153374F00D3697D /* CZUIHeader.h */,
+				84B00A392153345600D3697D /* CZHUD.h */,
+				84B00A382153345600D3697D /* CZHUD.m */,
+				84B00A342153344700D3697D /* CZOnePixelView.h */,
+				84B00A352153344700D3697D /* CZOnePixelView.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
