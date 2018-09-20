@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "cz self library summary"
   s.description  = "cz self library description"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #s.dependency 'MJExtension', '~>3.0'
   #s.dependency 'YYCache', '~>1.0'
   #s.dependency 'IQKeyboardManager', '~>6.0'
-  #s.dependency 'CocoaLumberjack', '~>3.4'
+  s.dependency 'CocoaLumberjack', '~>3.4'
 
 
   s.requires_arc = true
