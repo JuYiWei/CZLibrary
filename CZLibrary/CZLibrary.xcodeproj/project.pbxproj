@@ -24,6 +24,31 @@
 		84B00A222152580E00D3697D /* UIWindow+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A172152580E00D3697D /* UIWindow+cz.m */; };
 		84B00A232152580E00D3697D /* UIColor+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A182152580E00D3697D /* UIColor+cz.m */; };
 		84B00A242152580E00D3697D /* UIFont+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A192152580E00D3697D /* UIFont+cz.m */; };
+		84B00A2F2153343400D3697D /* CZRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A282153343400D3697D /* CZRandom.m */; };
+		84B00A302153343400D3697D /* CZLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A2B2153343400D3697D /* CZLog.m */; };
+		84B00A312153343400D3697D /* CZDateTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A2D2153343400D3697D /* CZDateTransform.m */; };
+		84B00A322153343400D3697D /* CZAdaptTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A2E2153343400D3697D /* CZAdaptTool.m */; };
+		84B00A362153344700D3697D /* CZOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A352153344700D3697D /* CZOnePixelView.m */; };
+		84B00A462153345600D3697D /* CZHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A382153345600D3697D /* CZHUD.m */; };
+		84B00A472153345600D3697D /* hud_loading_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A3B2153345600D3697D /* hud_loading_07.png */; };
+		84B00A482153345600D3697D /* hud_loading_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A3C2153345600D3697D /* hud_loading_06.png */; };
+		84B00A492153345600D3697D /* hud_loading_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A3D2153345600D3697D /* hud_loading_10.png */; };
+		84B00A4A2153345600D3697D /* hud_loading_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A3E2153345600D3697D /* hud_loading_04.png */; };
+		84B00A4B2153345600D3697D /* hud_loading_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A3F2153345600D3697D /* hud_loading_05.png */; };
+		84B00A4C2153345600D3697D /* hud_loading_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A402153345600D3697D /* hud_loading_01.png */; };
+		84B00A4D2153345600D3697D /* hud_loading_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A412153345600D3697D /* hud_loading_00.png */; };
+		84B00A4E2153345600D3697D /* hud_loading_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A422153345600D3697D /* hud_loading_02.png */; };
+		84B00A4F2153345600D3697D /* hud_loading_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A432153345600D3697D /* hud_loading_03.png */; };
+		84B00A502153345600D3697D /* hud_loading_08.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A442153345600D3697D /* hud_loading_08.png */; };
+		84B00A512153345600D3697D /* hud_loading_09.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B00A452153345600D3697D /* hud_loading_09.png */; };
+		84B00A5F2153346200D3697D /* CZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A532153346200D3697D /* CZRootViewController.m */; };
+		84B00A602153346200D3697D /* CZLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A542153346200D3697D /* CZLaunchViewController.m */; };
+		84B00A612153346200D3697D /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A552153346200D3697D /* CZTabBarController.m */; };
+		84B00A632153346200D3697D /* CZCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A5D2153346200D3697D /* CZCoverViewController.m */; };
+		84B00A642153346200D3697D /* CZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A5E2153346200D3697D /* CZNavigationController.m */; };
+		84B00A6D215337C900D3697D /* CZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A69215337C900D3697D /* CZBaseView.m */; };
+		84B00A6E215337C900D3697D /* CZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B00A6A215337C900D3697D /* CZBaseViewController.m */; };
+		86B042B92A2FBC7114C22E38 /* libPods-CZLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21057F715AB3D17FE92462A4 /* libPods-CZLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D30D4208500DAF78794AACB /* Pods-CZLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-CZLibrary/Pods-CZLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		21057F715AB3D17FE92462A4 /* libPods-CZLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CZLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B009CB21524B2300D3697D /* CZLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B009CE21524B2300D3697D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B009CF21524B2300D3697D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +108,47 @@
 		84B00A1B2152580E00D3697D /* UIScrollView+cz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+cz.h"; sourceTree = "<group>"; };
 		84B00A1C2152580E00D3697D /* UINavigationController+cz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+cz.h"; sourceTree = "<group>"; };
 		84B00A1D2152580E00D3697D /* UIView+cz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+cz.h"; sourceTree = "<group>"; };
+		84B00A252153341100D3697D /* CZLibraryMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLibraryMacro.h; sourceTree = "<group>"; };
+		84B00A272153343400D3697D /* CZLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLog.h; sourceTree = "<group>"; };
+		84B00A282153343400D3697D /* CZRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRandom.m; sourceTree = "<group>"; };
+		84B00A292153343400D3697D /* CZAdaptTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdaptTool.h; sourceTree = "<group>"; };
+		84B00A2A2153343400D3697D /* CZDateTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZDateTransform.h; sourceTree = "<group>"; };
+		84B00A2B2153343400D3697D /* CZLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLog.m; sourceTree = "<group>"; };
+		84B00A2C2153343400D3697D /* CZRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRandom.h; sourceTree = "<group>"; };
+		84B00A2D2153343400D3697D /* CZDateTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZDateTransform.m; sourceTree = "<group>"; };
+		84B00A2E2153343400D3697D /* CZAdaptTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZAdaptTool.m; sourceTree = "<group>"; };
+		84B00A342153344700D3697D /* CZOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZOnePixelView.h; sourceTree = "<group>"; };
+		84B00A352153344700D3697D /* CZOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZOnePixelView.m; sourceTree = "<group>"; };
+		84B00A382153345600D3697D /* CZHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHUD.m; sourceTree = "<group>"; };
+		84B00A392153345600D3697D /* CZHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHUD.h; sourceTree = "<group>"; };
+		84B00A3B2153345600D3697D /* hud_loading_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_07.png; sourceTree = "<group>"; };
+		84B00A3C2153345600D3697D /* hud_loading_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_06.png; sourceTree = "<group>"; };
+		84B00A3D2153345600D3697D /* hud_loading_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_10.png; sourceTree = "<group>"; };
+		84B00A3E2153345600D3697D /* hud_loading_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_04.png; sourceTree = "<group>"; };
+		84B00A3F2153345600D3697D /* hud_loading_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_05.png; sourceTree = "<group>"; };
+		84B00A402153345600D3697D /* hud_loading_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_01.png; sourceTree = "<group>"; };
+		84B00A412153345600D3697D /* hud_loading_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_00.png; sourceTree = "<group>"; };
+		84B00A422153345600D3697D /* hud_loading_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_02.png; sourceTree = "<group>"; };
+		84B00A432153345600D3697D /* hud_loading_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_03.png; sourceTree = "<group>"; };
+		84B00A442153345600D3697D /* hud_loading_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_08.png; sourceTree = "<group>"; };
+		84B00A452153345600D3697D /* hud_loading_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_loading_09.png; sourceTree = "<group>"; };
+		84B00A532153346200D3697D /* CZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRootViewController.m; sourceTree = "<group>"; };
+		84B00A542153346200D3697D /* CZLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLaunchViewController.m; sourceTree = "<group>"; };
+		84B00A552153346200D3697D /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
+		84B00A562153346200D3697D /* CZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNavigationController.h; sourceTree = "<group>"; };
+		84B00A592153346200D3697D /* CZCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZCoverViewController.h; sourceTree = "<group>"; };
+		84B00A5A2153346200D3697D /* CZLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLaunchViewController.h; sourceTree = "<group>"; };
+		84B00A5B2153346200D3697D /* CZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRootViewController.h; sourceTree = "<group>"; };
+		84B00A5C2153346200D3697D /* CZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarController.h; sourceTree = "<group>"; };
+		84B00A5D2153346200D3697D /* CZCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCoverViewController.m; sourceTree = "<group>"; };
+		84B00A5E2153346200D3697D /* CZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNavigationController.m; sourceTree = "<group>"; };
+		84B00A662153370000D3697D /* CZToolsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZToolsHeader.h; sourceTree = "<group>"; };
+		84B00A672153374F00D3697D /* CZUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZUIHeader.h; sourceTree = "<group>"; };
+		84B00A69215337C900D3697D /* CZBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBaseView.m; sourceTree = "<group>"; };
+		84B00A6A215337C900D3697D /* CZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBaseViewController.m; sourceTree = "<group>"; };
+		84B00A6B215337C900D3697D /* CZBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBaseView.h; sourceTree = "<group>"; };
+		84B00A6C215337C900D3697D /* CZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBaseViewController.h; sourceTree = "<group>"; };
+		F3A9D04ACB15219D5E2AD3B1 /* Pods-CZLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CZLibrary/Pods-CZLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B042B92A2FBC7114C22E38 /* libPods-CZLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +177,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18DCA7FEF9CBDA7797C72A64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21057F715AB3D17FE92462A4 /* libPods-CZLibrary.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F389B2060DA28AAF9E3A9BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D04ACB15219D5E2AD3B1 /* Pods-CZLibrary.debug.xcconfig */,
+				1D30D4208500DAF78794AACB /* Pods-CZLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84B009C221524B2300D3697D = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +201,8 @@
 				84B009E621524B2500D3697D /* CZLibraryTests */,
 				84B009F121524B2500D3697D /* CZLibraryUITests */,
 				84B009CC21524B2300D3697D /* Products */,
+				5F389B2060DA28AAF9E3A9BD /* Pods */,
+				18DCA7FEF9CBDA7797C72A64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,7 +255,12 @@
 			isa = PBXGroup;
 			children = (
 				84B00A0421524D3900D3697D /* CZLibrary.h */,
+				84B00A252153341100D3697D /* CZLibraryMacro.h */,
+				84B00A65215334B100D3697D /* Assets */,
 				84B00A052152565700D3697D /* Category */,
+				84B00A522153346200D3697D /* Main */,
+				84B00A262153343400D3697D /* Tools */,
+				84B00A332153344700D3697D /* UI */,
 			);
 			path = Lbirary;
 			sourceTree = "<group>";
@@ -215,6 +308,81 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		84B00A262153343400D3697D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A662153370000D3697D /* CZToolsHeader.h */,
+				84B00A292153343400D3697D /* CZAdaptTool.h */,
+				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
+				84B00A2A2153343400D3697D /* CZDateTransform.h */,
+				84B00A2D2153343400D3697D /* CZDateTransform.m */,
+				84B00A272153343400D3697D /* CZLog.h */,
+				84B00A2B2153343400D3697D /* CZLog.m */,
+				84B00A2C2153343400D3697D /* CZRandom.h */,
+				84B00A282153343400D3697D /* CZRandom.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		84B00A332153344700D3697D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A68215337C900D3697D /* Base */,
+				84B00A672153374F00D3697D /* CZUIHeader.h */,
+				84B00A392153345600D3697D /* CZHUD.h */,
+				84B00A382153345600D3697D /* CZHUD.m */,
+				84B00A342153344700D3697D /* CZOnePixelView.h */,
+				84B00A352153344700D3697D /* CZOnePixelView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		84B00A522153346200D3697D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A5B2153346200D3697D /* CZRootViewController.h */,
+				84B00A532153346200D3697D /* CZRootViewController.m */,
+				84B00A5A2153346200D3697D /* CZLaunchViewController.h */,
+				84B00A542153346200D3697D /* CZLaunchViewController.m */,
+				84B00A592153346200D3697D /* CZCoverViewController.h */,
+				84B00A5D2153346200D3697D /* CZCoverViewController.m */,
+				84B00A5C2153346200D3697D /* CZTabBarController.h */,
+				84B00A552153346200D3697D /* CZTabBarController.m */,
+				84B00A562153346200D3697D /* CZNavigationController.h */,
+				84B00A5E2153346200D3697D /* CZNavigationController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84B00A65215334B100D3697D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A412153345600D3697D /* hud_loading_00.png */,
+				84B00A402153345600D3697D /* hud_loading_01.png */,
+				84B00A422153345600D3697D /* hud_loading_02.png */,
+				84B00A432153345600D3697D /* hud_loading_03.png */,
+				84B00A3E2153345600D3697D /* hud_loading_04.png */,
+				84B00A3F2153345600D3697D /* hud_loading_05.png */,
+				84B00A3C2153345600D3697D /* hud_loading_06.png */,
+				84B00A3B2153345600D3697D /* hud_loading_07.png */,
+				84B00A442153345600D3697D /* hud_loading_08.png */,
+				84B00A452153345600D3697D /* hud_loading_09.png */,
+				84B00A3D2153345600D3697D /* hud_loading_10.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		84B00A68215337C900D3697D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A6C215337C900D3697D /* CZBaseViewController.h */,
+				84B00A6A215337C900D3697D /* CZBaseViewController.m */,
+				84B00A6B215337C900D3697D /* CZBaseView.h */,
+				84B00A69215337C900D3697D /* CZBaseView.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,9 +390,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84B009F721524B2500D3697D /* Build configuration list for PBXNativeTarget "CZLibrary" */;
 			buildPhases = (
+				3203EFF33426B58191963C3E /* [CP] Check Pods Manifest.lock */,
 				84B009C721524B2300D3697D /* Sources */,
 				84B009C821524B2300D3697D /* Frameworks */,
 				84B009C921524B2300D3697D /* Resources */,
+				A4AEBF59D9ECC8877895695F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,9 +488,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B00A4C2153345600D3697D /* hud_loading_01.png in Resources */,
+				84B00A4F2153345600D3697D /* hud_loading_03.png in Resources */,
 				84B009DB21524B2500D3697D /* LaunchScreen.storyboard in Resources */,
+				84B00A4D2153345600D3697D /* hud_loading_00.png in Resources */,
+				84B00A472153345600D3697D /* hud_loading_07.png in Resources */,
+				84B00A512153345600D3697D /* hud_loading_09.png in Resources */,
+				84B00A482153345600D3697D /* hud_loading_06.png in Resources */,
+				84B00A4E2153345600D3697D /* hud_loading_02.png in Resources */,
 				84B009D821524B2500D3697D /* Assets.xcassets in Resources */,
 				84B009D621524B2300D3697D /* Main.storyboard in Resources */,
+				84B00A492153345600D3697D /* hud_loading_10.png in Resources */,
+				84B00A4A2153345600D3697D /* hud_loading_04.png in Resources */,
+				84B00A502153345600D3697D /* hud_loading_08.png in Resources */,
+				84B00A4B2153345600D3697D /* hud_loading_05.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +521,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3203EFF33426B58191963C3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CZLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4AEBF59D9ECC8877895695F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CZLibrary/Pods-CZLibrary-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CZLibrary/Pods-CZLibrary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84B009C721524B2300D3697D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -349,14 +573,27 @@
 				84B009D321524B2300D3697D /* ViewController.m in Sources */,
 				84B00A1F2152580E00D3697D /* UIImage+cz.m in Sources */,
 				84B00A1E2152580E00D3697D /* UIScrollView+cz.m in Sources */,
+				84B00A2F2153343400D3697D /* CZRandom.m in Sources */,
 				84B009DE21524B2500D3697D /* main.m in Sources */,
+				84B00A602153346200D3697D /* CZLaunchViewController.m in Sources */,
+				84B00A462153345600D3697D /* CZHUD.m in Sources */,
 				84B00A0D2152568200D3697D /* NSMutableDictionary+cz.m in Sources */,
+				84B00A362153344700D3697D /* CZOnePixelView.m in Sources */,
+				84B00A6D215337C900D3697D /* CZBaseView.m in Sources */,
 				84B00A232152580E00D3697D /* UIColor+cz.m in Sources */,
 				84B00A222152580E00D3697D /* UIWindow+cz.m in Sources */,
+				84B00A642153346200D3697D /* CZNavigationController.m in Sources */,
 				84B009D021524B2300D3697D /* AppDelegate.m in Sources */,
 				84B00A202152580E00D3697D /* UIView+cz.m in Sources */,
 				84B00A212152580E00D3697D /* UINavigationController+cz.m in Sources */,
+				84B00A632153346200D3697D /* CZCoverViewController.m in Sources */,
+				84B00A5F2153346200D3697D /* CZRootViewController.m in Sources */,
+				84B00A612153346200D3697D /* CZTabBarController.m in Sources */,
 				84B00A242152580E00D3697D /* UIFont+cz.m in Sources */,
+				84B00A322153343400D3697D /* CZAdaptTool.m in Sources */,
+				84B00A302153343400D3697D /* CZLog.m in Sources */,
+				84B00A312153343400D3697D /* CZDateTransform.m in Sources */,
+				84B00A6E215337C900D3697D /* CZBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,15 +762,13 @@
 		};
 		84B009F821524B2500D3697D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3A9D04ACB15219D5E2AD3B1 /* Pods-CZLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibrary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -542,15 +777,13 @@
 		};
 		84B009F921524B2500D3697D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D30D4208500DAF78794AACB /* Pods-CZLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibrary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,11 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -583,11 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -601,11 +826,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -619,11 +840,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZUL3JZQ3E;
 				INFOPLIST_FILE = CZLibraryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.CZLibraryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

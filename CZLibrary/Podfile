@@ -1,0 +1,49 @@
+
+
+platform:ios,'9.0'
+
+
+# 忽略引入库的所有警告（强迫症者的福音啊）
+inhibit_all_warnings!
+
+target 'CZLibrary' do
+
+
+#ui
+pod 'Masonry', '~> 1.0'
+pod 'SDWebImage', '~> 4.0'
+pod 'SVProgressHUD', '~> 2.0'
+pod 'MBProgressHUD', '~> 1.1'
+pod 'MJRefresh', '~> 3.0'
+pod 'DZNEmptyDataSet', '~> 1.8'
+
+
+#network
+pod 'AFNetworking', '~> 3.0'
+
+
+#tool
+#pod 'WebViewJavascriptBridge', '~> 6.0'
+pod 'MJExtension', '~>3.0'
+pod 'YYCache', '~>1.0'
+pod 'IQKeyboardManager', '~>6.0'
+pod 'CocoaLumberjack', '~>3.4'
+
+
+#UM
+#pod 'UMCCommon'
+#pod 'UMCCommonLog'
+#pod 'UMCSecurityPlugins'
+
+#pod 'UMCAnalytics'
+#pod 'UMCPush'
+#pod 'UMCShare/UI'
+#pod 'UMCShare/Social/ReducedWeChat'
+#pod 'UMCShare/Social/ReducedQQ'
+#pod 'UMCShare/Social/AlipayShare'
+#pod 'UMCShare/Social/Email'
+#pod 'UMCShare/Social/SMS'
+
+
+end
+

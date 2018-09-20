@@ -10,6 +10,8 @@
 #define CZLibrary_h
 
 #import "CZFoundationHeader.h"
-
+#import "CZUIKitHeader.h"
+#import "CZToolsHeader.h"
+#import "CZUIHeader.h"
 
 #endif /* CZLibrary_h */
