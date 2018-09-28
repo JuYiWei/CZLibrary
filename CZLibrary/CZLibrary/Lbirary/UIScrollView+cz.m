@@ -21,7 +21,6 @@
         UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, [UIScreen mainScreen].scale);
         [self.layer renderInContext: UIGraphicsGetCurrentContext()];
         image = UIGraphicsGetImageFromCurrentImageContext();
-        
         self.contentOffset = savedContentOffset;
         self.frame = savedFrame;
     }
@@ -29,6 +28,5 @@
     
     return image;
 }
-
 
 @end

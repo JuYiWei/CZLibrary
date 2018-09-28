@@ -14,5 +14,4 @@
 #import "CZLog.h"
 #import "CZRandom.h"
 
-
 #endif /* CZToolsHeader_h */

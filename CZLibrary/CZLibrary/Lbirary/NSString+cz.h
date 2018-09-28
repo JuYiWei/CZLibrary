@@ -11,7 +11,12 @@
 
 @interface NSString (cz)
 
-- (CGRect)cz_rectWithFont:(UIFont *)font;
+/**
+ 简易的计算字符串宽高
 
+ @param font 字体
+ @return Rect
+ */
+- (CGRect)cz_rectWithFont:(UIFont *)font;
 
 @end

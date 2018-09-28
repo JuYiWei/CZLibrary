@@ -28,6 +28,7 @@
     CIQRCodeFeature *feature = [features firstObject];
     if (feature) {
         return feature.messageString;
+        
     } else {
         return @"没有二维码";
     }
@@ -38,11 +39,9 @@
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     [filter setValue:data forKey:@"inputMessage"];
     [filter setValue:@"M" forKey:@"inputCorrectionLevel"];// L: 7% M: 15% Q: 25% H: 30%
-    
     CIImage *outputImage = filter.outputImage;
     CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale); // scale 为放大倍数
     CIImage *transformImage = [outputImage imageByApplyingTransform:transform];
-    
     CIContext *context = [CIContext contextWithOptions:nil];
     CGImageRef imageRef = [context createCGImage:transformImage fromRect:transformImage.extent];
     UIImage *qrCodeImage = [UIImage imageWithCGImage:imageRef];
@@ -50,6 +49,5 @@
     
     return qrCodeImage;
 }
-
 
 @end

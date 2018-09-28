@@ -10,7 +10,11 @@
 
 @interface UIScrollView (cz)
 
-- (UIImage *)cz_scrollerViewCapture;
+/**
+ scrollerView 生成长图
 
+ @return image
+ */
+- (UIImage *)cz_scrollerViewCapture;
 
 @end

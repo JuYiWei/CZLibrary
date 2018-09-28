@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CZLibraryMacro.h"
 
 // 设备类型
 typedef NS_ENUM(NSUInteger, CZAdaptDeviceType) {
@@ -25,34 +26,24 @@ typedef NS_ENUM(NSUInteger, CZAdaptSizeClassType) {
     CZAdaptSizeClassUndefine
 };
 
-
-/**
- 屏幕适配工具
- */
 @interface CZAdaptTool : NSObject
 
-+ (instancetype)instance;
+CZ_SINGLETON_HEADER(CZAdaptTool)
 
 /**
  设备类型
 
+ @param view 需要检测的 view
  @return 真实的设备类型，iPhone 和 iPad
  */
-- (CZAdaptDeviceType)CZ_deviceTypeWithView:(UIView *)view;
+- (CZAdaptDeviceType)cz_deviceTypeWithView:(UIView *)view;
 
 /**
  尺寸类型
 
+ @param view 需要检测的 view
  @return 推荐使用，支持 iPad 分屏，用 CR 和 RR 区分 iPhone 和 iPad 型
  */
-- (CZAdaptSizeClassType)CZ_sizeClassTypeWithView:(UIView *)view;
-
-
-
-
-
-
-
-
+- (CZAdaptSizeClassType)cz_sizeClassTypeWithView:(UIView *)view;
 
 @end

@@ -10,7 +10,6 @@
 
 @implementation UIColor (cz)
 
-
 #pragma mark - 类方法
 
 + (UIColor *)cz_hexValueColor:(NSInteger)hexValue {
@@ -47,10 +46,7 @@
     [[NSScanner scannerWithString:gString] scanHexInt:&g];
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     
-    return [UIColor colorWithRed:((float) r / 255.0f)
-                           green:((float) g / 255.0f)
-                            blue:((float) b / 255.0f)
-                           alpha:alpha];
+    return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:alpha];
 }
 
 + (UIColor *)cz_gradientColoes:(NSArray <UIColor *>*)colors withSize:(CGSize)size direction:(CZGradientColorDirection)direction {
@@ -70,24 +66,25 @@
     CGPoint endPoint = CGPointMake(size.width, size.height);
     
     switch (direction) {
-        case CZGradientColorDirectionTop:
+        case CZGradientColorDirectionTop:{
             break;
+        }
             
         case CZGradientColorDirectionLeft: {
             endPoint = CGPointMake(size.width, 0);
-        }
             break;
+        }
             
         case CZGradientColorDirectionLeftTop: {
             endPoint = CGPointMake(0, size.height);
-        }
             break;
+        }
             
         case CZGradientColorDirectionRightTop: {
             startPoint = CGPointMake(size.width, 0);
             endPoint = CGPointMake(0, size.height);
-        }
             break;
+        }
     }
     
     CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
@@ -98,7 +95,6 @@
     
     return [UIColor colorWithPatternImage:image];
 }
-
 
 #pragma mark - 实例方法
 
@@ -111,6 +107,5 @@
         return [UIColor blackColor];
     }
 }
-
 
 @end

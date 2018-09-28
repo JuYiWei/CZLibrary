@@ -11,11 +11,10 @@
 @implementation NSString (cz)
 
 - (CGRect)cz_rectWithFont:(UIFont *)font {
-    CGRect messageRect = [self boundingRectWithSize:CGSizeZero
-                                            options:NSStringDrawingUsesFontLeading
-                                         attributes:@{NSFontAttributeName: font}
-                                            context:nil];
-    return messageRect;
+    return [self boundingRectWithSize:CGSizeZero
+                              options:NSStringDrawingUsesFontLeading
+                           attributes:@{NSFontAttributeName: font}
+                              context:nil];;
 }
 
 @end

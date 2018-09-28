@@ -20,21 +20,13 @@
 @property (nonatomic, strong) UITraitCollection *wrTrait;
 @property (nonatomic, strong) UITraitCollection *hcTrait;
 @property (nonatomic, strong) UITraitCollection *hrTrait;
-
 @end
 
 @implementation CZAdaptTool
 
-static CZAdaptTool *singleton;
-+ (instancetype)instance {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        singleton = [[CZAdaptTool alloc] init];
-    });
-    return singleton;
-}
+CZ_SINGLETON_IMPLEMENTATION(CZAdaptTool)
 
-- (CZAdaptDeviceType)CZ_deviceTypeWithView:(UIView *)view; {
+- (CZAdaptDeviceType)cz_deviceTypeWithView:(UIView *)view; {
     self.currentTrait = view.traitCollection;
     if ([self.currentTrait containsTraitsInCollection:self.phoneTrait]) {
         return CZAdaptTypePhone;
@@ -45,7 +37,7 @@ static CZAdaptTool *singleton;
     }
 }
 
-- (CZAdaptSizeClassType)CZ_sizeClassTypeWithView:(UIView *)view {
+- (CZAdaptSizeClassType)cz_sizeClassTypeWithView:(UIView *)view {
     self.currentTrait = view.traitCollection;
     if ([self.currentTrait containsTraitsInCollection:self.wcTrait]) {
         if ([self.currentTrait containsTraitsInCollection:self.hrTrait]) {
@@ -69,7 +61,6 @@ static CZAdaptTool *singleton;
         return CZAdaptSizeClassUndefine;
     }
 }
-
 
 #pragma mark - getter
 
@@ -114,12 +105,5 @@ static CZAdaptTool *singleton;
     }
     return _hrTrait;
 }
-
-
-
-
-
-
-
 
 @end

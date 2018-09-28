@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [CZLog config];
+    
     CZLogInfo(@"asdsd");
     NSLog(@"123");
     
@@ -26,7 +26,7 @@
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [[CZHUD sharedInstance] showMessage:@"123"];
+    [[CZHUD sharedInstance] cz_showLoadingImage];
 }
 
 

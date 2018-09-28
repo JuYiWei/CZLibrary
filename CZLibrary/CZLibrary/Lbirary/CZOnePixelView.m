@@ -13,11 +13,10 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj.constant == 1.0) {
+        if (obj.constant == 1.0 && obj.priority != 1000) {
             obj.constant = 1.0/[UIScreen mainScreen].scale;
         }
     }];
 }
-
 
 @end

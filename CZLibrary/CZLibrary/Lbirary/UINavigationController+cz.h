@@ -10,13 +10,32 @@
 
 @interface UINavigationController (cz)
 
-/*! 修改背景透明度 */
+/**
+ 修改背景透明度
+
+ @param alpha alpha
+ */
 - (void)cz_changeNavAlpha:(CGFloat)alpha;
-/*! 修改标题透明度 */
+
+/**
+ 修改标题透明度
+
+ @param alpha alpha
+ */
 - (void)cz_changeNavTitleAlpha:(CGFloat)alpha;
-/*! 修改大标题透明度 */
+
+/**
+ 修改大标题透明度
+
+ @param alpha alpha
+ */
 - (void)cz_changeNavLargeTitleAlpha:(CGFloat)alpha;
-/*! 是否隐藏底部的横线 */
+
+/**
+ 是否隐藏底部的横线
+
+ @param hidden hidden
+ */
 - (void)cz_changeNavBottomLineHidden:(BOOL)hidden;
 
 @end

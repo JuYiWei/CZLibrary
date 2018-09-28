@@ -34,19 +34,11 @@
 
 @property (nonatomic, strong) NSDateFormatter *formatter_chinese_HH_mm_ss;
 @property (nonatomic, strong) NSDateFormatter *formatter_chinese_HH_mm;
-
 @end
 
 @implementation CZDateTransform
 
-static CZDateTransform *singleton;
-+ (instancetype)sharedInstance {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        singleton = [[CZDateTransform alloc] init];
-    });
-    return singleton;
-}
+CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
 
 #pragma mark - General transform
 
@@ -67,7 +59,6 @@ static CZDateTransform *singleton;
     NSDate *date = [[self selectDateFormatterWithType:type] dateFromString:string];
     return [date timeIntervalSince1970];
 }
-
 
 #pragma mark - Priviate
 
@@ -108,7 +99,6 @@ static CZDateTransform *singleton;
             break;
         }
             
-            
         case CZDateToolType_Slash_yyyy_MM_dd_HH_mm_ss: {
             formatter = self.formatter_slash_yyyy_MM_dd_HH_mm_ss;
             break;
@@ -125,7 +115,6 @@ static CZDateTransform *singleton;
             formatter = self.formatter_slash_yyyy_MM;
             break;
         }
-            
             
         case CZDateToolType_Chinese_yyyy_MM_dd_HH_mm_ss: {
             formatter = self.formatter_chinese_yyyy_MM_dd_HH_mm_ss;
@@ -170,7 +159,6 @@ static CZDateTransform *singleton;
     return formatter;
 }
 
-
 #pragma mark - Getter Formatter
 
 #pragma mark - 2018-09-09 09:09:09
@@ -207,7 +195,6 @@ static CZDateTransform *singleton;
     return _formatter_transverse_yyyy_MM;
 }
 
-
 #pragma mark - 2018.09.09 09:09:09
 
 - (NSDateFormatter *)formatter_point_yyyy_MM_dd_HH_mm_ss {
@@ -241,7 +228,6 @@ static CZDateTransform *singleton;
     }
     return _formatter_point_yyyy_MM;
 }
-
 
 #pragma mark - 2018/09/09 09/09/09
 
@@ -277,7 +263,6 @@ static CZDateTransform *singleton;
     return _formatter_slash_yyyy_MM;
 }
 
-
 #pragma mark - 2018年09月09日 09时09分09秒
 
 - (NSDateFormatter *)formatter_chinese_yyyy_MM_dd_HH_mm_ss {
@@ -311,7 +296,6 @@ static CZDateTransform *singleton;
     }
     return _formatter_chinese_yyyy_MM;
 }
-
 
 #pragma mark - 时分秒
 
@@ -347,7 +331,6 @@ static CZDateTransform *singleton;
     return _formatter_chinese_HH_mm;
 }
 
-
 #pragma mark - 最近
 
 - (void)cz_timestampRangeLastDays:(NSInteger)days block:(void(^)(NSTimeInterval start, NSTimeInterval end))block {
@@ -365,15 +348,4 @@ static CZDateTransform *singleton;
     }
 }
 
-
-
-
 @end
-
-
-
-
-
-
-
-

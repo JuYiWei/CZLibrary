@@ -8,35 +8,75 @@
 
 #import "SVProgressHUD.h"
 #import "MBProgressHUD.h"
+#import "CZLibraryMacro.h"
 
 @interface CZHUD : SVProgressHUD
 
-/*! 使用 SVPHUD 的话，配置通用样式 */
-+ (void)svp_config;
+#pragma mark - SVP HUD 使用原 类方法展示
+
+/**
+ SVPHUD 通用配置
+ */
++ (void)cz_svpConfig;
+
+#pragma mark - MBP HUD 使用单例方式展示
+
+CZ_SINGLETON_HEADER(CZHUD)
+
+/**
+ 纯文本提示
+
+ @param message message description
+ @param view view description
+ */
+- (void)cz_showMessage:(NSString *)message inView:(UIView *)view;
+
+/**
+ 纯文本提示 默认顶层 window
+
+ @param message message description
+ */
+- (void)cz_showMessage:(NSString *)message;
+
+/**
+ 提示信息 + 文本
+
+ @param message message description
+ @param view view description
+ */
+- (void)cz_showInfoMessage:(NSString *)message inView:(UIView *)view;
 
 
+/**
+ 提示信息 + 文本 默认顶层 window
 
+ @param message message description
+ */
+- (void)cz_showInfoMessage:(NSString *)message;
 
-+ (instancetype)sharedInstance;
+/**
+ 加载动画
 
-/*! 纯文本，指定 view */
-- (void)showMessage:(NSString *)message inView:(UIView *)view;
-/*! 提示信息 + 文本，指定 view */
-- (void)showInfoMessage:(NSString *)message inView:(UIView *)view;
-/*! 加载动画，指定 view */
-- (void)showLoadingImageInView:(UIView *)view;
+ @param view view description
+ */
+- (void)cz_showLoadingImageInView:(UIView *)view;
 
-/*! 纯文本，默认顶层 window */
-- (void)showMessage:(NSString *)message;
-/*! 提示信息 + 文本，默认顶层 window */
-- (void)showInfoMessage:(NSString *)message;
-/*! 加载动画，默认顶层 window */
-- (void)showLoadingImage;
+/**
+ 加载动画 默认顶层 window
+ */
+- (void)cz_showLoadingImage;
 
-/*! 延迟 隐藏 */
-- (void)hideAfter:(NSTimeInterval)delay;
-/*! 隐藏 */
-- (void)hide;
+/**
+ 延迟 隐藏
+
+ @param delay delay description
+ */
+- (void)cz_hideAfter:(NSTimeInterval)delay;
+
+/**
+ 隐藏
+ */
+- (void)cz_hide;
 
 @end
 

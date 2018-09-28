@@ -26,7 +26,7 @@ CGFloat const CZHUD_PADDING = 16;
 
 #pragma mark - SVP HUD
 
-+ (void)svp_config {
++ (void)cz_svpConfig {
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setCornerRadius:10.];
     [SVProgressHUD setMinimumSize:CGSizeMake(120, 120)];
@@ -57,14 +57,7 @@ CGFloat const CZHUD_PADDING = 16;
 
 #pragma mark - MBP HUD
 
-static CZHUD *singleton;
-+ (instancetype)sharedInstance {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        singleton = [[CZHUD alloc] init];
-    });
-    return singleton;
-}
+CZ_SINGLETON_IMPLEMENTATION(CZHUD)
 
 - (instancetype)init {
     self = [super init];
@@ -85,11 +78,11 @@ static CZHUD *singleton;
 }
 
 
-- (void)showMessage:(NSString *)message {
-    [self showMessage:message inView:[UIWindow cz_frontWindow]];
+- (void)cz_showMessage:(NSString *)message {
+    [self cz_showMessage:message inView:[UIWindow cz_frontWindow]];
 }
 
-- (void)showMessage:(NSString *)message inView:(UIView *)view {
+- (void)cz_showMessage:(NSString *)message inView:(UIView *)view {
     UIFont *messageFont = [UIFont systemFontOfSize:16];
     CGFloat messageWidth = [message cz_rectWithFont:messageFont].size.width;
     
@@ -104,11 +97,11 @@ static CZHUD *singleton;
     [self.hud hideAnimated:YES afterDelay:2];
 }
 
-- (void)showInfoMessage:(NSString *)message {
-    [self showInfoMessage:message inView:[UIWindow cz_frontWindow]];
+- (void)cz_showInfoMessage:(NSString *)message {
+    [self cz_showInfoMessage:message inView:[UIWindow cz_frontWindow]];
 }
 
-- (void)showInfoMessage:(NSString *)message inView:(UIView *)view {
+- (void)cz_showInfoMessage:(NSString *)message inView:(UIView *)view {
     UIFont *messageFont = [UIFont systemFontOfSize:16];
     CGFloat messageWidth = [message cz_rectWithFont:messageFont].size.width;
     UIImage *iconImage = [UIImage imageNamed:@"hud_loading_01"];
@@ -130,14 +123,14 @@ static CZHUD *singleton;
     [self.hud hideAnimated:YES afterDelay:2];
 }
 
-- (void)showLoadingImage {
-    [self showLoadingImageInView:[UIWindow cz_frontWindow]];
+- (void)cz_showLoadingImage {
+    [self cz_showLoadingImageInView:[UIWindow cz_frontWindow]];
 }
 
-- (void)showLoadingImageInView:(UIView *)view {
+- (void)cz_showLoadingImageInView:(UIView *)view {
     UIImageView *gifImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hud_loading_01"]];
     NSMutableArray *imageArray = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 11; i ++) {
+    for (int i = 0; i < 4; i ++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"hud_loading_%02d", i]];
         [imageArray addObject:image];
     }
@@ -149,14 +142,13 @@ static CZHUD *singleton;
     [self showCustomImageView:gifImageView inView:view];
 }
 
-- (void)hideAfter:(NSTimeInterval)delay {
+- (void)cz_hideAfter:(NSTimeInterval)delay {
     [self.hud hideAnimated:YES afterDelay:delay];
 }
 
-- (void)hide {
+- (void)cz_hide {
     [self.hud hideAnimated:YES];
 }
-
 
 #pragma mark - Getter
 
@@ -165,7 +157,6 @@ static CZHUD *singleton;
         _customView = [UIView new];
         _customView.backgroundColor = [UIColor cz_hexColor:@"3f3f3f" alpha:0.8];
         _customView.layer.cornerRadius = 6.;
-        
         [_customView addSubview:self.iconImageView];
         [_customView addSubview:self.messageLabel];
     }
@@ -187,7 +178,5 @@ static CZHUD *singleton;
     }
     return _iconImageView;
 }
-
-
 
 @end
