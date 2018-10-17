@@ -11,6 +11,7 @@
 
 #import "CZAdaptTool.h"
 #import "CZDateTransform.h"
+#import "CZHTTP.h"
 #import "CZLog.h"
 #import "CZRandom.h"
 

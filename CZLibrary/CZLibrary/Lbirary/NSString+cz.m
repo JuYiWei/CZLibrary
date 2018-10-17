@@ -11,10 +11,7 @@
 @implementation NSString (cz)
 
 - (CGRect)cz_rectWithFont:(UIFont *)font {
-    return [self boundingRectWithSize:CGSizeZero
-                              options:NSStringDrawingUsesFontLeading
-                           attributes:@{NSFontAttributeName: font}
-                              context:nil];;
+    return [self boundingRectWithSize:CGSizeZero options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: font} context:nil];;
 }
 
 @end

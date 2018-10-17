@@ -69,14 +69,17 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
             formatter = self.formatter_transverse_yyyy_MM_dd_HH_mm_ss;
             break;
         }
+            
         case CZDateToolType_Transverse_yyyy_MM_dd_HH_mm: {
             formatter = self.formatter_transverse_yyyy_MM_dd_HH_mm;
             break;
         }
+            
         case CZDateToolType_Transverse_yyyy_MM_dd: {
             formatter = self.formatter_transverse_yyyy_MM_dd;
             break;
         }
+            
         case CZDateToolType_Transverse_yyyy_MM: {
             formatter = self.formatter_transverse_yyyy_MM;
             break;
@@ -90,10 +93,12 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
             formatter = self.formatter_point_yyyy_MM_dd_HH_mm;
             break;
         }
+            
         case CZDateToolType_Point_yyyy_MM_dd:{
             formatter = self.formatter_point_yyyy_MM_dd;
             break;
         }
+            
         case CZDateToolType_Point_yyyy_MM:{
             formatter = self.formatter_point_yyyy_MM;
             break;
@@ -103,14 +108,17 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
             formatter = self.formatter_slash_yyyy_MM_dd_HH_mm_ss;
             break;
         }
+            
         case CZDateToolType_Slash_yyyy_MM_dd_HH_mm: {
             formatter = self.formatter_slash_yyyy_MM_dd_HH_mm;
             break;
         }
+            
         case CZDateToolType_Slash_yyyy_MM_dd: {
             formatter = self.formatter_slash_yyyy_MM_dd;
             break;
         }
+            
         case CZDateToolType_Slash_yyyy_MM: {
             formatter = self.formatter_slash_yyyy_MM;
             break;
@@ -120,14 +128,17 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
             formatter = self.formatter_chinese_yyyy_MM_dd_HH_mm_ss;
             break;
         }
+            
         case CZDateToolType_Chinese_yyyy_MM_dd_HH_mm: {
             formatter = self.formatter_chinese_yyyy_MM_dd_HH_mm;
             break;
         }
+            
         case CZDateToolType_Chinese_yyyy_MM_dd: {
             formatter = self.formatter_chinese_yyyy_MM_dd;
             break;
         }
+            
         case CZDateToolType_Chinese_yyyy_MM: {
             formatter = self.formatter_chinese_yyyy_MM;
             break;
@@ -137,6 +148,7 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
             formatter = self.formatter_normal_HH_mm_ss;
             break;
         }
+            
         case CZDateToolType_Normal_HH_mm: {
             formatter = self.formatter_normal_HH_mm;
             break;
@@ -146,6 +158,7 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
             formatter = self.formatter_chinese_HH_mm_ss;
             break;
         }
+            
         case CZDateToolType_Chinese_HH_mm: {
             formatter = self.formatter_chinese_HH_mm;
             break;
@@ -339,7 +352,6 @@ CZ_SINGLETON_IMPLEMENTATION(CZDateTransform)
     NSDate *todayStart = [self.formatter_transverse_yyyy_MM_dd dateFromString:todayString];
     NSTimeInterval todayStartValue = todayStart.timeIntervalSince1970;
     NSTimeInterval todayEndValue = todayStartValue + 24*3600 - 1;
-    
     NSInteger past = (days - 1) * 24 * 3600;
     NSTimeInterval startValue = past >= 0 ? todayStartValue - past : todayStartValue;
 

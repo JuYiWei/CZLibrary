@@ -30,8 +30,10 @@ CZ_SINGLETON_IMPLEMENTATION(CZAdaptTool)
     self.currentTrait = view.traitCollection;
     if ([self.currentTrait containsTraitsInCollection:self.phoneTrait]) {
         return CZAdaptTypePhone;
+        
     } else if ([self.currentTrait containsTraitsInCollection:self.padTrait]) {
         return CZAdaptTypePad;
+        
     } else {
         return CZAdaptTypeUndefine;
     }
@@ -42,8 +44,10 @@ CZ_SINGLETON_IMPLEMENTATION(CZAdaptTool)
     if ([self.currentTrait containsTraitsInCollection:self.wcTrait]) {
         if ([self.currentTrait containsTraitsInCollection:self.hrTrait]) {
             return CZAdaptSizeClassCR;
+            
         } else if ([self.currentTrait containsTraitsInCollection:self.hcTrait]) {
             return CZAdaptSizeClassCC;
+            
         } else {
             return CZAdaptSizeClassUndefine;
         }
@@ -51,8 +55,10 @@ CZ_SINGLETON_IMPLEMENTATION(CZAdaptTool)
     } else if ([self.currentTrait containsTraitsInCollection:self.wrTrait]) {
         if ([self.currentTrait containsTraitsInCollection:self.hrTrait]) {
             return CZAdaptSizeClassRR;
+            
         } else if ([self.currentTrait containsTraitsInCollection:self.hcTrait]) {
             return CZAdaptSizeClassRC;
+            
         } else {
             return CZAdaptSizeClassUndefine;
         }

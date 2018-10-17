@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CZLibrary.h"
+#import "CZHTTP.h"
 
 @interface ViewController ()
 
@@ -18,9 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    CZLogInfo(@"asdsd");
-    NSLog(@"123");
+
+    [[CZHTTP sharedInstance] post_LoginWithUsername:@"A" success:^(NSURLSessionDataTask *operation, id response) {
+        
+    } failure:^(NSURLSessionDataTask *operation, id response) {
+        
+    }];
     
 }
 

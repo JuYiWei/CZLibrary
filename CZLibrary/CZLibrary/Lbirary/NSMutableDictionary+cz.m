@@ -7,15 +7,17 @@
 //
 
 #import "NSMutableDictionary+cz.h"
+#import "CZLog.h"
+#import "NSObject+cz.h"
 
 @implementation NSMutableDictionary (cz)
 
 - (void)cz_addUnEmptyObj:(id)obj forKey:(NSString *)key {
-    if (obj && ![obj isKindOfClass:[NSNull class]]) {
-        [self setObject:obj forKey:key];
+    if (CZObjectIsEmpty(obj)) {
+        CZLogVerbose(@"对象不存在：%@", key);
         
     } else {
-        NSLog(@"对象不存在：%@", key);
+        [self setObject:obj forKey:key];
     }
 }
 
@@ -28,7 +30,7 @@
         [self setObject:string forKey:key];
         
     } else {
-        NSLog(@"参数值不是 String 或者 Number：%@", key);
+        CZLogVerbose(@"参数值不是 String 或者 Number：%@", key);
     }
 }
 

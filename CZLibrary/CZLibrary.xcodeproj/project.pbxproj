@@ -11,6 +11,8 @@
 		840922E2215DC52900A089A6 /* hud_loading_00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840922DE215DC52900A089A6 /* hud_loading_00@2x.png */; };
 		840922E3215DC52900A089A6 /* hud_loading_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840922DF215DC52900A089A6 /* hud_loading_03@2x.png */; };
 		840922E4215DC52900A089A6 /* hud_loading_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840922E0215DC52900A089A6 /* hud_loading_01@2x.png */; };
+		840922E8215E04BA00A089A6 /* NSObject+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 840922E7215E04BA00A089A6 /* NSObject+cz.m */; };
+		840922EE215E2C5200A089A6 /* CZHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 840922ED215E2C5200A089A6 /* CZHTTP.m */; };
 		84B009D021524B2300D3697D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B009CF21524B2300D3697D /* AppDelegate.m */; };
 		84B009D321524B2300D3697D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B009D221524B2300D3697D /* ViewController.m */; };
 		84B009D621524B2300D3697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B009D421524B2300D3697D /* Main.storyboard */; };
@@ -68,6 +70,10 @@
 		840922DE215DC52900A089A6 /* hud_loading_00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud_loading_00@2x.png"; sourceTree = "<group>"; };
 		840922DF215DC52900A089A6 /* hud_loading_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud_loading_03@2x.png"; sourceTree = "<group>"; };
 		840922E0215DC52900A089A6 /* hud_loading_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud_loading_01@2x.png"; sourceTree = "<group>"; };
+		840922E6215E04BA00A089A6 /* NSObject+cz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+cz.h"; sourceTree = "<group>"; };
+		840922E7215E04BA00A089A6 /* NSObject+cz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+cz.m"; sourceTree = "<group>"; };
+		840922EC215E2C5200A089A6 /* CZHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZHTTP.h; sourceTree = "<group>"; };
+		840922ED215E2C5200A089A6 /* CZHTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHTTP.m; sourceTree = "<group>"; };
 		84B009CB21524B2300D3697D /* CZLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B009CE21524B2300D3697D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B009CF21524B2300D3697D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -308,6 +314,8 @@
 				84B00A0B2152568200D3697D /* NSMutableDictionary+cz.m */,
 				84B00A072152568200D3697D /* NSString+cz.h */,
 				84B00A0A2152568200D3697D /* NSString+cz.m */,
+				840922E6215E04BA00A089A6 /* NSObject+cz.h */,
+				840922E7215E04BA00A089A6 /* NSObject+cz.m */,
 			);
 			name = FoundationCategory;
 			sourceTree = "<group>";
@@ -320,6 +328,8 @@
 				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
 				84B00A2A2153343400D3697D /* CZDateTransform.h */,
 				84B00A2D2153343400D3697D /* CZDateTransform.m */,
+				840922EC215E2C5200A089A6 /* CZHTTP.h */,
+				840922ED215E2C5200A089A6 /* CZHTTP.m */,
 				84B00A272153343400D3697D /* CZLog.h */,
 				84B00A2B2153343400D3697D /* CZLog.m */,
 				84B00A2C2153343400D3697D /* CZRandom.h */,
@@ -550,11 +560,13 @@
 				84B00A602153346200D3697D /* CZLaunchViewController.m in Sources */,
 				84B00A462153345600D3697D /* CZHUD.m in Sources */,
 				84B00A0D2152568200D3697D /* NSMutableDictionary+cz.m in Sources */,
+				840922EE215E2C5200A089A6 /* CZHTTP.m in Sources */,
 				84B00A362153344700D3697D /* CZOnePixelView.m in Sources */,
 				84B00A6D215337C900D3697D /* CZBaseView.m in Sources */,
 				84B00A232152580E00D3697D /* UIColor+cz.m in Sources */,
 				84B00A222152580E00D3697D /* UIWindow+cz.m in Sources */,
 				84B00A642153346200D3697D /* CZNavigationController.m in Sources */,
+				840922E8215E04BA00A089A6 /* NSObject+cz.m in Sources */,
 				84B009D021524B2300D3697D /* AppDelegate.m in Sources */,
 				84B00A202152580E00D3697D /* UIView+cz.m in Sources */,
 				84B00A212152580E00D3697D /* UINavigationController+cz.m in Sources */,

@@ -11,5 +11,6 @@
 
 #import "NSString+cz.h"
 #import "NSMutableDictionary+cz.h"
+#import "NSObject+cz.h"
 
 #endif /* CZFoundationHeader_h */

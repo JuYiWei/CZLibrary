@@ -67,7 +67,8 @@ CZ_SINGLETON_IMPLEMENTATION(CZHUD)
     return self;
 }
 
-/*! 自定义 通用处理 */
+#pragma mark - Private 通用处理
+
 - (void)showCustomImageView:(UIImageView *)imageView inView:(UIView *)view {
     self.hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     self.hud.mode = MBProgressHUDModeCustomView;
@@ -77,6 +78,7 @@ CZ_SINGLETON_IMPLEMENTATION(CZHUD)
     self.hud.backgroundView.backgroundColor = [UIColor cz_hexColor:@"000000" alpha:0.2];
 }
 
+#pragma mark - public
 
 - (void)cz_showMessage:(NSString *)message {
     [self cz_showMessage:message inView:[UIWindow cz_frontWindow]];
