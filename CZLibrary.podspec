@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
-  s.version      = "0.0.14"
+  s.version      = "0.0.15"
   s.summary      = "cz self library summary"
   s.description  = "cz self library description"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   #s.dependency 'DZNEmptyDataSet', '~> 1.8'
 
 #network
-  s.dependency 'AFNetworking', '~> 3.0'
+  #s.dependency 'AFNetworking', '~> 3.0'
 
 #tool
   #s.dependency 'MJExtension', '~>3.0'

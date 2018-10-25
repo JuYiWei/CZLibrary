@@ -65,8 +65,8 @@ CZ_SINGLETON_IMPLEMENTATION(CZHTTP)
                failure:(void(^)(NSURLSessionDataTask *task,id response))failure {
     CZLogInfo(@"response: %@", response);
     if (task.error.code) {
-        NSString *code = [NSString stringWithFormat:@"%ld",task.error.code];
-        CZLogWarn(@"请求错误：code:%ld, msg:%@",task.error.code, task.error.localizedDescription);
+        NSString *code = [NSString stringWithFormat:@"%zi",task.error.code];
+        CZLogWarn(@"请求错误：code:%zi, msg:%@",task.error.code, task.error.localizedDescription);
         if (failure) { failure(task,@{CZHTTPCode:code, CZHTTPMsg:task.error.localizedDescription}); }
         
     } else {
