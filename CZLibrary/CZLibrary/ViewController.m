@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "CZLibrary.h"
-#import "CZHTTP.h"
+#import "Store/Tools/CZHTTPDemo.h"
 
 @interface ViewController ()
 
@@ -19,13 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-    [[CZHTTP sharedInstance] post_LoginWithUsername:@"A" success:^(NSURLSessionDataTask *operation, id response) {
-        
-    } failure:^(NSURLSessionDataTask *operation, id response) {
-        
-    }];
+    [CZLog cz_config];
     
+    CZLogInfo(@"asdsd+== %@",@"asdadad")
+
+    [[CZHTTPDemo sharedInstance] testLogin:@"asda" success:^(NSURLSessionDataTask *operation, id response) {
+
+    } failure:^(NSURLSessionDataTask *operation, id response) {
+
+    }];
 }
 
 

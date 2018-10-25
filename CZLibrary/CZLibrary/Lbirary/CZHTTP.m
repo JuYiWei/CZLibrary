@@ -9,16 +9,14 @@
 #import "CZHTTP.h"
 #import <AFNetworking.h>
 #import "CZLog.h"
-
-NSString *const CZHTTPMsg = @"errMsg";
-NSString *const CZHTTPCode = @"status";
-NSString *const CZHTTPData = @"result";
-
-#define CZ_HTTP_HOST @"http://localhost:8082"
+#import "NSArray+cz.h"
+#import "NSDictionary+cz.h"
 
 @interface CZHTTP()
-@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;//网络请求管理
-@property (nonatomic, copy) NSDictionary *commonParams;
+@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
+@property (nonatomic, copy) NSString *codeKey;
+@property (nonatomic, copy) NSString *dataKey;
+@property (nonatomic, copy) NSString *messageKey;
 @end
 
 @implementation CZHTTP
@@ -28,6 +26,11 @@ CZ_SINGLETON_IMPLEMENTATION(CZHTTP)
 -(id)init {
     self = [super init];
     if (self) {
+        
+        self.codeKey = @"code";
+        self.dataKey = @"data";
+        self.messageKey = @"message";
+        
         self.sessionManager = [[AFHTTPSessionManager alloc] init];
         self.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -50,13 +53,15 @@ CZ_SINGLETON_IMPLEMENTATION(CZHTTP)
         //        //设置证书
         //        [securityPoliy setPinnedCertificates:cerSet];
         //        [self.sessionManager setSecurityPolicy:securityPoliy];
-        
-        self.commonParams = @{};
-        
     }
     return self;
 }
 
+- (void)cz_configWithResponseDataCodeKey:(NSString *)code dataKey:(NSString *)data messageKey:(NSString *)message {
+    self.codeKey = code;
+    self.dataKey = data;
+    self.messageKey = message;
+}
 
 /*! 通用处理返回数据 */
 -(void)processResponse:(id)response
@@ -65,43 +70,45 @@ CZ_SINGLETON_IMPLEMENTATION(CZHTTP)
                failure:(void(^)(NSURLSessionDataTask *task,id response))failure {
     CZLogInfo(@"response: %@", response);
     if (task.error.code) {
-        NSString *code = [NSString stringWithFormat:@"%zi",task.error.code];
-        CZLogWarn(@"请求错误：code:%zi, msg:%@",task.error.code, task.error.localizedDescription);
-        if (failure) { failure(task,@{CZHTTPCode:code, CZHTTPMsg:task.error.localizedDescription}); }
+        NSString *code = CZStringInteger(task.error.code);
+        CZLogWarn(@"请求错误：code:%@, msg:%@",code, task.error.localizedDescription);
+        if (failure) { failure(task,@{self.codeKey:code, self.messageKey:task.error.localizedDescription}); }
         
     } else {
         NSDictionary *responseDic = (NSDictionary *)response;
         if ([responseDic isKindOfClass:[NSDictionary class]]) {
-            id errcode = responseDic[CZHTTPCode];
-            if ([errcode isKindOfClass:[NSString class]] && [((NSString *)errcode) isEqualToString:@"0"]) {
-                if (success) { success(task, responseDic[CZHTTPData]); }
-                
-            }else if ([errcode isKindOfClass:[NSNumber class]] && ((NSNumber *)errcode).integerValue == 0) {                    if (success) { success(task, responseDic[CZHTTPData]); }
+            id errcode = responseDic[self.codeKey];
+            
+            if (([errcode isKindOfClass:[NSString class]] && [((NSString *)errcode) isEqualToString:@"0"]) ||
+                ([errcode isKindOfClass:[NSNumber class]] && ((NSNumber *)errcode).integerValue == 0)) {
+                if (success) { success(task, responseDic[self.dataKey]); }
                 
             } else {
-                NSString *errMsg = responseDic[CZHTTPMsg];
+                NSString *errMsg = responseDic[self.messageKey];
                 if (![errMsg isKindOfClass:[NSString class]]) {
-                    errMsg = @"服务数据异常";
+                    errMsg = @"操作失败";
                 }
-                CZLogWarn(@"请求错误：msg:请求服务操作失败");
-                if (failure) { failure(task, @{CZHTTPMsg:errMsg, CZHTTPCode:@"401"}); }
+                CZLogWarn(@"操作失败：msg:%@", errMsg);
+                if (failure) { failure(task, @{self.codeKey:@"401", self.messageKey:errMsg}); }
             }
             
         } else {
             CZLogWarn(@"请求错误：msg:返回数据结构不正确");
-            if (failure) { failure(task, @{CZHTTPMsg:@"网络通信错误", CZHTTPCode:@"500"}); }
+            if (failure) { failure(task, @{self.codeKey:@"500", self.messageKey:@"网络通信错误"}); }
         }
     }
 }
 
 // 通用 post 请求处理
-- (void)post_requestWithURLString:(NSString *)URLString
+- (void)cz_post_requestWithURLString:(NSString *)URLString
                           paramas:(NSDictionary *)paramas
                          progress:(void (^)(NSProgress *))progress
                           success:(CZHTTPBlock)success
                           failure:(CZHTTPBlock)failure {
+    NSMutableDictionary *tempParamas = [NSMutableDictionary dictionaryWithDictionary:self.commonParams];
+    [tempParamas addEntriesFromDictionary:paramas];
     CZLogInfo(@"post 请求 url:%@\n参数：\n%@", URLString, paramas);
-    [self.sessionManager POST:URLString parameters:paramas progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.sessionManager POST:URLString parameters:tempParamas progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self processResponse:responseObject task:task success:success failure:failure];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self processResponse:task.response task:task success:success failure:failure];
@@ -109,42 +116,21 @@ CZ_SINGLETON_IMPLEMENTATION(CZHTTP)
 }
 
 // 通用 get 请求处理
-- (void)get_requestWithURLString:(NSString *)URLString
+- (void)cz_get_requestWithURLString:(NSString *)URLString
                          paramas:(NSDictionary *)paramas
                         progress:(void (^)(NSProgress *))progress
                          success:(CZHTTPBlock)success
                          failure:(CZHTTPBlock)failure {
-    CZLogInfo(@"get 请求 url:%@\n参数：\n%@", URLString, paramas);
-    [self.sessionManager GET:URLString parameters:paramas progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSMutableDictionary *tempParamas = [NSMutableDictionary dictionaryWithDictionary:self.commonParams];
+    [tempParamas addEntriesFromDictionary:paramas];
+    CZLogInfo(@"get 请求 url:%@\n参数：\n%@", URLString, tempParamas);
+    [self.sessionManager GET:URLString parameters:tempParamas progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self processResponse:responseObject task:task success:success failure:failure];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self processResponse:task.response task:task success:success failure:failure];
     }];
 }
 
-- (NSString *)httpRequestUrlWithPath:(NSString *)path {
-    return [NSString stringWithFormat:@"%@%@", CZ_HTTP_HOST, path];
-}
 
-#pragma mark - API
-
-- (void)post_LoginWithUsername:(NSString *)username
-                       success:(CZHTTPBlock)success
-                       failure:(CZHTTPBlock)failure {
-    NSString *path = @"/myServer/project/shoppingCart/search.php";
-    NSString *url = [self httpRequestUrlWithPath:path];
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithDictionary:self.commonParams];
-    [params cz_addUnEmptyObj:username forKey:@"name"];
-    
-    [self post_requestWithURLString:url paramas:params progress:nil success:success failure:failure];
-}
-
-#pragma mark - Getter
-
-- (NSDictionary *)commonParams {
-    _commonParams = @{@"token": [NSString stringWithFormat:@"%u", arc4random()%100]};
-    
-    return _commonParams;
-}
 
 @end

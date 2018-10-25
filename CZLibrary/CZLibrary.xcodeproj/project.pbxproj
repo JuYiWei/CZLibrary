@@ -13,6 +13,9 @@
 		840922E4215DC52900A089A6 /* hud_loading_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840922E0215DC52900A089A6 /* hud_loading_01@2x.png */; };
 		840922E8215E04BA00A089A6 /* NSObject+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 840922E7215E04BA00A089A6 /* NSObject+cz.m */; };
 		840922EE215E2C5200A089A6 /* CZHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 840922ED215E2C5200A089A6 /* CZHTTP.m */; };
+		8479650D21819DA0002290DF /* CZHTTPDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479650C21819DA0002290DF /* CZHTTPDemo.m */; };
+		847965102181A3B2002290DF /* NSDictionary+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479650F2181A3B2002290DF /* NSDictionary+cz.m */; };
+		847965132181A97D002290DF /* NSArray+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 847965122181A97D002290DF /* NSArray+cz.m */; };
 		84B009D021524B2300D3697D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B009CF21524B2300D3697D /* AppDelegate.m */; };
 		84B009D321524B2300D3697D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B009D221524B2300D3697D /* ViewController.m */; };
 		84B009D621524B2300D3697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B009D421524B2300D3697D /* Main.storyboard */; };
@@ -74,6 +77,12 @@
 		840922E7215E04BA00A089A6 /* NSObject+cz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+cz.m"; sourceTree = "<group>"; };
 		840922EC215E2C5200A089A6 /* CZHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZHTTP.h; sourceTree = "<group>"; };
 		840922ED215E2C5200A089A6 /* CZHTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHTTP.m; sourceTree = "<group>"; };
+		8479650B21819DA0002290DF /* CZHTTPDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZHTTPDemo.h; sourceTree = "<group>"; };
+		8479650C21819DA0002290DF /* CZHTTPDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHTTPDemo.m; sourceTree = "<group>"; };
+		8479650E2181A3B2002290DF /* NSDictionary+cz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+cz.h"; sourceTree = "<group>"; };
+		8479650F2181A3B2002290DF /* NSDictionary+cz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+cz.m"; sourceTree = "<group>"; };
+		847965112181A97D002290DF /* NSArray+cz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+cz.h"; sourceTree = "<group>"; };
+		847965122181A97D002290DF /* NSArray+cz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+cz.m"; sourceTree = "<group>"; };
 		84B009CB21524B2300D3697D /* CZLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B009CE21524B2300D3697D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B009CF21524B2300D3697D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -184,6 +193,15 @@
 				1D30D4208500DAF78794AACB /* Pods-CZLibrary.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8479650A21819D7F002290DF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8479650B21819DA0002290DF /* CZHTTPDemo.h */,
+				8479650C21819DA0002290DF /* CZHTTPDemo.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		84B009C221524B2300D3697D = {
@@ -300,8 +318,7 @@
 		84B00A6F21533DFE00D3697D /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				840922EC215E2C5200A089A6 /* CZHTTP.h */,
-				840922ED215E2C5200A089A6 /* CZHTTP.m */,
+				8479650A21819D7F002290DF /* Tools */,
 				84B00A68215337C900D3697D /* Base */,
 				84B00A522153346200D3697D /* Main */,
 			);
@@ -312,12 +329,16 @@
 			isa = PBXGroup;
 			children = (
 				84B00A092152568200D3697D /* CZFoundationHeader.h */,
+				847965112181A97D002290DF /* NSArray+cz.h */,
+				847965122181A97D002290DF /* NSArray+cz.m */,
+				8479650E2181A3B2002290DF /* NSDictionary+cz.h */,
+				8479650F2181A3B2002290DF /* NSDictionary+cz.m */,
 				84B00A082152568200D3697D /* NSMutableDictionary+cz.h */,
 				84B00A0B2152568200D3697D /* NSMutableDictionary+cz.m */,
-				84B00A072152568200D3697D /* NSString+cz.h */,
-				84B00A0A2152568200D3697D /* NSString+cz.m */,
 				840922E6215E04BA00A089A6 /* NSObject+cz.h */,
 				840922E7215E04BA00A089A6 /* NSObject+cz.m */,
+				84B00A072152568200D3697D /* NSString+cz.h */,
+				84B00A0A2152568200D3697D /* NSString+cz.m */,
 			);
 			name = FoundationCategory;
 			sourceTree = "<group>";
@@ -330,6 +351,8 @@
 				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
 				84B00A2A2153343400D3697D /* CZDateTransform.h */,
 				84B00A2D2153343400D3697D /* CZDateTransform.m */,
+				840922EC215E2C5200A089A6 /* CZHTTP.h */,
+				840922ED215E2C5200A089A6 /* CZHTTP.m */,
 				84B00A272153343400D3697D /* CZLog.h */,
 				84B00A2B2153343400D3697D /* CZLog.m */,
 				84B00A2C2153343400D3697D /* CZRandom.h */,
@@ -552,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B00A0C2152568200D3697D /* NSString+cz.m in Sources */,
+				847965132181A97D002290DF /* NSArray+cz.m in Sources */,
 				84B009D321524B2300D3697D /* ViewController.m in Sources */,
 				84B00A1F2152580E00D3697D /* UIImage+cz.m in Sources */,
 				84B00A1E2152580E00D3697D /* UIScrollView+cz.m in Sources */,
@@ -566,8 +590,10 @@
 				84B00A232152580E00D3697D /* UIColor+cz.m in Sources */,
 				84B00A222152580E00D3697D /* UIWindow+cz.m in Sources */,
 				84B00A642153346200D3697D /* CZNavigationController.m in Sources */,
+				847965102181A3B2002290DF /* NSDictionary+cz.m in Sources */,
 				840922E8215E04BA00A089A6 /* NSObject+cz.m in Sources */,
 				84B009D021524B2300D3697D /* AppDelegate.m in Sources */,
+				8479650D21819DA0002290DF /* CZHTTPDemo.m in Sources */,
 				84B00A202152580E00D3697D /* UIView+cz.m in Sources */,
 				84B00A212152580E00D3697D /* UINavigationController+cz.m in Sources */,
 				84B00A632153346200D3697D /* CZCoverViewController.m in Sources */,

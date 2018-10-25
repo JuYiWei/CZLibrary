@@ -9,8 +9,10 @@
 #ifndef CZFoundationHeader_h
 #define CZFoundationHeader_h
 
-#import "NSString+cz.h"
+#import "NSArray+cz.h"
+#import "NSDictionary+cz.h"
 #import "NSMutableDictionary+cz.h"
 #import "NSObject+cz.h"
+#import "NSString+cz.h"
 
 #endif /* CZFoundationHeader_h */
