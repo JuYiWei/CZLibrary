@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   #s.dependency 'DZNEmptyDataSet', '~> 1.8'
 
 #network
-  #s.dependency 'AFNetworking', '~> 3.0'
+  s.dependency 'AFNetworking', '~> 3.0'
 
 #tool
   #s.dependency 'MJExtension', '~>3.0'
