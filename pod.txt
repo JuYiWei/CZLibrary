@@ -5,5 +5,5 @@ pod trunk push CZLibrary.podspec
 
 
 
-pod spec lint CZLibrary.podspec --use-libraries
-pod trunk push CZLibrary.podspec --use-libraries
+pod spec lint CZLibrary.podspec --use-libraries --allow-warnings
+pod trunk push CZLibrary.podspec --use-libraries --allow-warnings

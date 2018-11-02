@@ -7,45 +7,125 @@
 //
 
 #import "AppDelegate.h"
+#import "Lbirary/CZLog.h"
+#import "Lbirary/CZUMTool.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
 @implementation AppDelegate
 
+#pragma mark - init
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [CZLog cz_configLog];
+    
+    // 友盟基础配置
+    [CZUMTool cz_configWithAppkey:@"5911665ff5ade42612000644"];
+    // 友盟分享
+    [CZUMTool cz_configShareGlobal];
+    [CZUMTool cz_configShareWechatAppkey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
+    [CZUMTool cz_configShareQQAppkey:@"1105821097" redirectURL:@"http://mobile.umeng.com/social"];
+    // 友盟 push
+    [self initWithUMPushWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
-
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    CZLogDebug(@"applicationWillResignActive");
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    CZLogDebug(@"applicationDidEnterBackground");
 }
-
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    CZLogDebug(@"applicationWillEnterForeground");
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    CZLogDebug(@"applicationDidBecomeActive");
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    CZLogDebug(@"applicationWillTerminate");
+}
+
+#pragma mark - openUrl
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    CZLogDebug(@"被其他 APP 打开 = %@", url);
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url options:options];
+    if (!result) {
+        // 其他如支付等SDK的回调
+        CZLogDebug(@"被其他 APP 打开");
+    }
+    return result;
+}
+
+#pragma mark - Push
+
+- (void)initWithUMPushWithLaunchOptions:(NSDictionary *)launchOptions {
+    UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
+    entity.types = UMessageAuthorizationOptionBadge | UMessageAuthorizationOptionSound | UMessageAuthorizationOptionAlert;
+    if (@available(iOS 10.0, *)) {
+        [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    } else {
+        CZLogDebug(@"iOS 10 以下的 推送？");
+    }
+    
+    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            CZLogDebug(@"push 打开");
+        }else{
+            CZLogDebug(@"push 关闭");
+        }
+    }];
+}
+
+//iOS10以下使用这两个方法接收通知
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    [UMessage setAutoAlert:NO];
+    if([[[UIDevice currentDevice] systemVersion] intValue] < 10){
+        [UMessage didReceiveRemoteNotification:userInfo];
+        CZLogInfo(@"iOS 10 以下，收到推送消息 = %@", userInfo);
+    }
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+//iOS10新增：处理前台收到通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler  API_AVAILABLE(ios(10.0)){
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    CZLogInfo(@"iOS 10 以上，收到前台推送消息 = %@", userInfo);
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [UMessage setAutoAlert:NO];
+        [UMessage didReceiveRemoteNotification:userInfo];
+        //应用处于前台时的远程推送接受
+        
+    }else{
+        //应用处于前台时的本地推送接受
+    }
+    completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionAlert);
+}
+
+//iOS10新增：处理后台点击通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(nonnull void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    CZLogInfo(@"iOS 10 以上，收到后台点击推送消息 = %@", userInfo);
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [UMessage didReceiveRemoteNotification:userInfo];
+        //应用处于后台时的远程推送接受
+        
+    }else{
+        //应用处于后台时的本地推送接受
+    }
 }
 
 
 @end
+

@@ -30,19 +30,20 @@ pod 'IQKeyboardManager', '~>6.0'
 pod 'CocoaLumberjack', '~>3.4'
 
 
-#UM
-#pod 'UMCCommon'
-#pod 'UMCCommonLog'
-#pod 'UMCSecurityPlugins'
+# 友盟
+pod 'UMCCommon'
+pod 'UMCSecurityPlugins'
 
-#pod 'UMCAnalytics'
-#pod 'UMCPush'
-#pod 'UMCShare/UI'
-#pod 'UMCShare/Social/ReducedWeChat'
-#pod 'UMCShare/Social/ReducedQQ'
-#pod 'UMCShare/Social/AlipayShare'
-#pod 'UMCShare/Social/Email'
-#pod 'UMCShare/Social/SMS'
+pod 'UMCCommonLog'
+
+pod 'UMCAnalytics'
+
+pod 'UMCPush'
+
+pod 'UMCShare/UI'
+pod 'UMCShare/Social/ReducedWeChat'
+pod 'UMCShare/Social/ReducedQQ'
+
 
 
 end

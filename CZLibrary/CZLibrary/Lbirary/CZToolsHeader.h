@@ -13,5 +13,6 @@
 #import "CZDateTransform.h"
 #import "CZLog.h"
 #import "CZRandom.h"
+#import "CZUMTool.h"
 
 #endif /* CZToolsHeader_h */

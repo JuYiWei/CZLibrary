@@ -12,7 +12,7 @@ NSInteger const CZLogLevel = DDLogLevelVerbose;
 
 @implementation CZLog
 
-+ (void)cz_config {
++ (void)cz_configLog {
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
 //    [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
 //    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
@@ -20,5 +20,6 @@ NSInteger const CZLogLevel = DDLogLevelVerbose;
 //    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
 //    [DDLog addLogger:fileLogger];
 }
+
 
 @end

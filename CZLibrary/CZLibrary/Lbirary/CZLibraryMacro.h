@@ -9,9 +9,10 @@
 #ifndef CZLibraryMacro_h
 #define CZLibraryMacro_h
 
+#define CZLibraryErrorDomain @"CZLibraryErrorDomain"
 
 // 通用基础类型 字符串
-#define CZStringInteger(a)  [NSString stringWithFormat:@"%li", a]
+#define CZStringInteger(a)  [NSString stringWithFormat:@"%@", @(a)]
 #define CZStringFloat(a)    [NSString stringWithFormat:@"%.f", a]
 #define CZStringFloat3(a)   [NSString stringWithFormat:@"%.3f", a]
 #define CZStringNumber(a)   [NSString stringWithFormat:@"%@", a]

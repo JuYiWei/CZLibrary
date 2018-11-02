@@ -7,20 +7,29 @@
 //
 
 #import "NSArray+cz.h"
+#import "NSDictionary+cz.h"
 
 @implementation NSArray (cz)
 
+#if DEBUG
+
 - (NSString *)cz_formatterDescription {
-    NSError *error = nil;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
-    if (!error) {
-        NSString *res = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSString *res2 = [res stringByReplacingOccurrencesOfString:@" " withString:@""];
-        res2 = [res2 stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-        return [NSString stringWithFormat:@"\n> JsonString\n\n%@ \n\n> For Read\n\n%@", res2, res];
-    }
+    __block NSMutableString *jsonString = [NSMutableString string];
+    [jsonString appendString:@"["];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *temp;
+        if ([obj isKindOfClass:[NSArray class]] || [obj isKindOfClass:[NSDictionary class]]) {
+            temp = [NSString stringWithFormat:@"%@,", obj];
+        } else {
+            temp = [NSString stringWithFormat:@"\"%@\",", obj];
+        }
+        [jsonString appendString:temp];
+    }];
     
-    return @"not json Data ?";
+    [jsonString deleteCharactersInRange:NSMakeRange(jsonString.length-1, 1)];
+    [jsonString appendString:@"]"];
+    
+    return jsonString;
 }
 
 - (NSString *)debugDescription {
@@ -42,5 +51,7 @@
 - (NSString *)descriptionInStringsFileFormat {
     return [self cz_formatterDescription];
 }
+
+#endif
 
 @end
