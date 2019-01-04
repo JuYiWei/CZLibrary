@@ -14,6 +14,8 @@
 // 通用基础类型 字符串
 #define CZStringInteger(a)  [NSString stringWithFormat:@"%@", @(a)]
 #define CZStringFloat(a)    [NSString stringWithFormat:@"%.f", a]
+#define CZStringFloat1(a)    [NSString stringWithFormat:@"%.1f", a]
+#define CZStringFloat2(a)   [NSString stringWithFormat:@"%.2f", a]
 #define CZStringFloat3(a)   [NSString stringWithFormat:@"%.3f", a]
 #define CZStringNumber(a)   [NSString stringWithFormat:@"%@", a]
 

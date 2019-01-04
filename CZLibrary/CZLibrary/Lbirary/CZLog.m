@@ -8,6 +8,7 @@
 
 #import "CZLog.h"
 
+
 NSInteger const CZLogLevel = DDLogLevelVerbose;
 
 @implementation CZLog
