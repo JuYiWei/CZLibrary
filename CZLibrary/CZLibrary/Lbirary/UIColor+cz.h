@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define CZHexColor(hex) [UIColor cz_hexColor:hex]
+#define CZHexColorA(hex, a) [UIColor cz_hexColor:hex alpha:a]
 
 /*! 渐变起点位置 */
 typedef NS_ENUM(NSInteger, CZGradientColorDirection) {

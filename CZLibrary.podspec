@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "cz self library summary"
   s.description  = "cz self library description"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
@@ -38,24 +38,25 @@ Pod::Spec.new do |s|
   s.resources = "CZLibrary/CZLibrary/Lbirary/Assets/*.png"
   
 
-#ui
-  # s.dependency 'Masonry', '~> 1.0'
-  #s.dependency 'SDWebImage', '~> 4.0'
+# ui
+  s.dependency 'Masonry', '~> 1.0'
+  s.dependency 'SDWebImage', '~> 4.0'
   s.dependency 'SVProgressHUD', '~> 2.0'
   s.dependency 'MBProgressHUD', '~> 1.1'
-  #s.dependency 'MJRefresh', '~> 3.0'
-  #s.dependency 'DZNEmptyDataSet', '~> 1.8'
+  s.dependency 'MJRefresh', '~> 3.0'
+  s.dependency 'DZNEmptyDataSet', '~> 1.8'
 
-#network
+# network
   s.dependency 'AFNetworking', '~> 3.0'
 
-#tool
-  #s.dependency 'MJExtension', '~>3.0'
-  #s.dependency 'YYCache', '~>1.0'
-  #s.dependency 'IQKeyboardManager', '~>6.0'
+# tool
+  s.dependency 'MJExtension', '~>3.0'
+  s.dependency 'FMDB', '~>2.0'
+  s.dependency 'YYCache', '~>1.0'
+  s.dependency 'IQKeyboardManager', '~>6.0'
   s.dependency 'CocoaLumberjack', '~>3.4'
 
-
+# 友盟
   s.dependency 'UMCCommon', '~> 1.5'
   s.dependency 'UMCSecurityPlugins', '~> 1.0'
   s.dependency 'UMCCommonLog', '~> 1.0'

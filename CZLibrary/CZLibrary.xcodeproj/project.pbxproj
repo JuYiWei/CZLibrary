@@ -14,6 +14,9 @@
 		840922E8215E04BA00A089A6 /* NSObject+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 840922E7215E04BA00A089A6 /* NSObject+cz.m */; };
 		840922EE215E2C5200A089A6 /* CZHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 840922ED215E2C5200A089A6 /* CZHTTP.m */; };
 		841961FA218B231B00A76FBA /* CZUMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 841961F9218B231B00A76FBA /* CZUMTool.m */; };
+		8425A42F21D0B33A0088EE73 /* CZDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8425A42E21D0B33A0088EE73 /* CZDevice.m */; };
+		8428A2C921DF005D0076DEC9 /* etwwt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8428A2C821DF005C0076DEC9 /* etwwt.ttf */; };
+		8428A2CC21DF03200076DEC9 /* NSDate+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428A2CB21DF03200076DEC9 /* NSDate+cz.m */; };
 		8479650D21819DA0002290DF /* CZHTTPDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479650C21819DA0002290DF /* CZHTTPDemo.m */; };
 		847965102181A3B2002290DF /* NSDictionary+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479650F2181A3B2002290DF /* NSDictionary+cz.m */; };
 		847965132181A97D002290DF /* NSArray+cz.m in Sources */ = {isa = PBXBuildFile; fileRef = 847965122181A97D002290DF /* NSArray+cz.m */; };
@@ -81,6 +84,11 @@
 		841961F8218B231B00A76FBA /* CZUMTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZUMTool.h; sourceTree = "<group>"; };
 		841961F9218B231B00A76FBA /* CZUMTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZUMTool.m; sourceTree = "<group>"; };
 		841961FB218B2C5400A76FBA /* CZLibrary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CZLibrary.entitlements; sourceTree = "<group>"; };
+		8425A42D21D0B33A0088EE73 /* CZDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZDevice.h; sourceTree = "<group>"; };
+		8425A42E21D0B33A0088EE73 /* CZDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZDevice.m; sourceTree = "<group>"; };
+		8428A2C821DF005C0076DEC9 /* etwwt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = etwwt.ttf; sourceTree = "<group>"; };
+		8428A2CA21DF03200076DEC9 /* NSDate+cz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+cz.h"; sourceTree = "<group>"; };
+		8428A2CB21DF03200076DEC9 /* NSDate+cz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+cz.m"; sourceTree = "<group>"; };
 		8479650B21819DA0002290DF /* CZHTTPDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZHTTPDemo.h; sourceTree = "<group>"; };
 		8479650C21819DA0002290DF /* CZHTTPDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHTTPDemo.m; sourceTree = "<group>"; };
 		8479650E2181A3B2002290DF /* NSDictionary+cz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+cz.h"; sourceTree = "<group>"; };
@@ -233,6 +241,7 @@
 		84B009CD21524B2300D3697D /* CZLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				8428A2C821DF005C0076DEC9 /* etwwt.ttf */,
 				841961FB218B2C5400A76FBA /* CZLibrary.entitlements */,
 				84B00A6F21533DFE00D3697D /* Store */,
 				84B00A0021524BB600D3697D /* Lbirary */,
@@ -272,11 +281,15 @@
 			children = (
 				84B00A0421524D3900D3697D /* CZLibrary.h */,
 				84B00A252153341100D3697D /* CZLibraryMacro.h */,
+				84B00A092152568200D3697D /* CZFoundationHeader.h */,
+				84B00A662153370000D3697D /* CZToolsHeader.h */,
+				84B00A672153374F00D3697D /* CZUIHeader.h */,
+				84B00A102152580E00D3697D /* CZUIKitHeader.h */,
 				84B00A65215334B100D3697D /* Assets */,
 				84B00A7E2153501000D3697D /* FoundationCategory */,
-				84B00A892153542700D3697D /* UIKitCategory */,
 				84B00A802153507100D3697D /* Tools */,
 				84B00A85215350BB00D3697D /* UI */,
+				84B00A892153542700D3697D /* UIKitCategory */,
 			);
 			path = Lbirary;
 			sourceTree = "<group>";
@@ -333,9 +346,10 @@
 		84B00A7E2153501000D3697D /* FoundationCategory */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A092152568200D3697D /* CZFoundationHeader.h */,
 				847965112181A97D002290DF /* NSArray+cz.h */,
 				847965122181A97D002290DF /* NSArray+cz.m */,
+				8428A2CA21DF03200076DEC9 /* NSDate+cz.h */,
+				8428A2CB21DF03200076DEC9 /* NSDate+cz.m */,
 				8479650E2181A3B2002290DF /* NSDictionary+cz.h */,
 				8479650F2181A3B2002290DF /* NSDictionary+cz.m */,
 				84B00A082152568200D3697D /* NSMutableDictionary+cz.h */,
@@ -351,11 +365,12 @@
 		84B00A802153507100D3697D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A662153370000D3697D /* CZToolsHeader.h */,
 				84B00A292153343400D3697D /* CZAdaptTool.h */,
 				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
 				84B00A2A2153343400D3697D /* CZDateTransform.h */,
 				84B00A2D2153343400D3697D /* CZDateTransform.m */,
+				8425A42D21D0B33A0088EE73 /* CZDevice.h */,
+				8425A42E21D0B33A0088EE73 /* CZDevice.m */,
 				840922EC215E2C5200A089A6 /* CZHTTP.h */,
 				840922ED215E2C5200A089A6 /* CZHTTP.m */,
 				84B00A272153343400D3697D /* CZLog.h */,
@@ -371,7 +386,6 @@
 		84B00A85215350BB00D3697D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A672153374F00D3697D /* CZUIHeader.h */,
 				84B00A392153345600D3697D /* CZHUD.h */,
 				84B00A382153345600D3697D /* CZHUD.m */,
 				84B00A342153344700D3697D /* CZOnePixelView.h */,
@@ -383,7 +397,6 @@
 		84B00A892153542700D3697D /* UIKitCategory */ = {
 			isa = PBXGroup;
 			children = (
-				84B00A102152580E00D3697D /* CZUIKitHeader.h */,
 				84B00A112152580E00D3697D /* UIColor+cz.h */,
 				84B00A182152580E00D3697D /* UIColor+cz.m */,
 				84B00A0F2152580E00D3697D /* UIFont+cz.h */,
@@ -515,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8428A2C921DF005D0076DEC9 /* etwwt.ttf in Resources */,
 				840922E1215DC52900A089A6 /* hud_loading_02@2x.png in Resources */,
 				840922E4215DC52900A089A6 /* hud_loading_01@2x.png in Resources */,
 				840922E3215DC52900A089A6 /* hud_loading_03@2x.png in Resources */,
@@ -597,6 +611,7 @@
 				847965132181A97D002290DF /* NSArray+cz.m in Sources */,
 				841961FA218B231B00A76FBA /* CZUMTool.m in Sources */,
 				84B009D321524B2300D3697D /* ViewController.m in Sources */,
+				8428A2CC21DF03200076DEC9 /* NSDate+cz.m in Sources */,
 				84B00A1F2152580E00D3697D /* UIImage+cz.m in Sources */,
 				84B00A1E2152580E00D3697D /* UIScrollView+cz.m in Sources */,
 				84B00A2F2153343400D3697D /* CZRandom.m in Sources */,
@@ -611,6 +626,7 @@
 				84B00A222152580E00D3697D /* UIWindow+cz.m in Sources */,
 				84B00A642153346200D3697D /* CZNavigationController.m in Sources */,
 				847965102181A3B2002290DF /* NSDictionary+cz.m in Sources */,
+				8425A42F21D0B33A0088EE73 /* CZDevice.m in Sources */,
 				840922E8215E04BA00A089A6 /* NSObject+cz.m in Sources */,
 				84B009D021524B2300D3697D /* AppDelegate.m in Sources */,
 				8479650D21819DA0002290DF /* CZHTTPDemo.m in Sources */,

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Lbirary/CZLog.h"
 #import "Lbirary/CZUMTool.h"
+#import "Lbirary/CZHUD.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -21,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [CZLog cz_configLog];
+    [CZHUD cz_svpConfig];
+    
     
     // 友盟基础配置
     [CZUMTool cz_configWithAppkey:@"5911665ff5ade42612000644"];

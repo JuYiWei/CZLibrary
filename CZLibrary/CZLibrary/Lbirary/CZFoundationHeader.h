@@ -10,6 +10,7 @@
 #define CZFoundationHeader_h
 
 #import "NSArray+cz.h"
+#import "NSDate+cz.h"
 #import "NSDictionary+cz.h"
 #import "NSMutableDictionary+cz.h"
 #import "NSObject+cz.h"

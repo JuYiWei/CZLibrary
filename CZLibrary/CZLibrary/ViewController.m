@@ -12,6 +12,7 @@
 
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -19,18 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     
-    CZLogInfo(@"%@", @[@"1",@"2",@"3",@"4", @{@"key":@"value", @"list":@[@"q", @"w", @"e"]}]);
+    [CZHUD showInfoWithStatus:@"123"];
     
     
     
-//    CZLogInfo(@"asdsd+== %@",@"asdadad")
-
-//    [[CZHTTPDemo sharedInstance] testLogin:@"asda" success:^(NSURLSessionDataTask *operation, id response) {
-//
-//    } failure:^(NSURLSessionDataTask *operation, id response) {
-//
-//    }];
 }
 
 
