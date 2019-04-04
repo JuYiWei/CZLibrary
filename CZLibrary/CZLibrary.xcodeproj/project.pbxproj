@@ -273,6 +273,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		841A52372255E0F000367BF9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				841A51DD2255D3F800367BF9 /* Foundation */,
+				841A51DB2255D3BD00367BF9 /* UIKit */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		8479650A21819D7F002290DF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +360,7 @@
 		84B00A0021524BB600D3697D /* Lbirary */ = {
 			isa = PBXGroup;
 			children = (
+				841A52372255E0F000367BF9 /* Category */,
 				84B00A0421524D3900D3697D /* CZLibrary.h */,
 				84B00A252153341100D3697D /* CZLibraryMacro.h */,
 				84B00A092152568200D3697D /* CZFoundationHeader.h */,
@@ -359,8 +369,6 @@
 				84B00A102152580E00D3697D /* CZUIKitHeader.h */,
 				841A51E12255D45600367BF9 /* UI */,
 				841A51E02255D44000367BF9 /* Tool */,
-				841A51DD2255D3F800367BF9 /* Foundation */,
-				841A51DB2255D3BD00367BF9 /* UIKit */,
 				84B00A65215334B100D3697D /* Assets */,
 			);
 			path = Lbirary;

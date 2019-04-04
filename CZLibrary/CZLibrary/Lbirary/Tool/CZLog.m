@@ -9,12 +9,12 @@
 #import "CZLog.h"
 
 
-NSInteger const CZLogLevel = DDLogLevelVerbose;
+//NSInteger const CZLogLevel = DDLogLevelVerbose;
 
 @implementation CZLog
 
 + (void)cz_configLog {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+//    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
 //    [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
 //    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
 //    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling

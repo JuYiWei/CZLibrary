@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "cz self library summary"
   s.description  = "cz self library description"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
@@ -14,22 +14,22 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git", :tag => "#{s.version}" }
 
   s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}", "CZLibrary/CZLibrary/Lbirary/*/*.{h,m}"
-  # s.subspec 'Category' do |ss1|
-  #   ss1.subspec 'UIKit' do |sss11|
-  #     sss11.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/UIKit/*.{h,m}"
-  #   end
-  #   ss1.subspec 'Foundation' do |sss12|
-  #     sss12.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/Foundation/*.{h,m}"
-  #   end
-  # end
+  s.subspec 'Category' do |ss1|
+    ss1.subspec 'UIKit' do |sss1|
+      sss1.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/UIKit/*.{h,m}"
+    end
+    ss1.subspec 'Foundation' do |sss2|
+      sss2.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/Foundation/*.{h,m}"
+    end
+  end
 
-  # s.subspec 'Tools' do |ss3|
-  #   ss3.source_files  = "CZLibrary/CZLibrary/Lbirary/Tools/*.{h,m}"
-  # end
+  s.subspec 'Tool' do |ss2|
+    ss2.source_files  = "CZLibrary/CZLibrary/Lbirary/Tools/*.{h,m}"
+  end
 
-  # s.subspec 'UI' do |ss4|
-  #   ss4.source_files  = "CZLibrary/CZLibrary/Lbirary/UI/*.{h,m}"
-  # end
+  s.subspec 'UI' do |ss3|
+    ss3.source_files  = "CZLibrary/CZLibrary/Lbirary/UI/*.{h,m}"
+  end
 
 # 排除资源
   # s.exclude_files = "Classes/Exclude"
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   # s.dependency 'FMDB', '~>2.0'
   # s.dependency 'YYCache', '~>1.0'
   # s.dependency 'IQKeyboardManager', '~>6.0'
-  s.dependency 'CocoaLumberjack', '~>3.4'
+  #s.dependency 'CocoaLumberjack', '~>3.4'
 
 # 友盟
 #   s.dependency 'UMCCommon', '~> 1.5'

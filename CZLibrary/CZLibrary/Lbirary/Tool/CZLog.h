@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
+//#import <CocoaLumberjack/CocoaLumberjack.h>
 
 // 使用常量的好处是，修改 level 时不需要大量宏替换二增加重新编译时间
-FOUNDATION_EXTERN NSInteger const CZLogLevel;
-#define ddLogLevel CZLogLevel
+//FOUNDATION_EXTERN NSInteger const CZLogLevel;
+//#define ddLogLevel CZLogLevel
 
-#define CZLogError(frmt, ...)       DDLogError(@">>>>>> Error\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
-#define CZLogWarn(frmt, ...)        DDLogWarn(@">>>>>> Warn\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
-#define CZLogInfo(frmt, ...)        DDLogInfo(@">>>>>> Info\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
-#define CZLogDebug(frmt, ...)       DDLogDebug(@">>>>>> Debug\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
-#define CZLogVerbose(frmt, ...)     DDLogVerbose(@">>>>>> Verbose\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
+//#define CZLogError(frmt, ...)       DDLogError(@">>>>>> Error\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
+//#define CZLogWarn(frmt, ...)        DDLogWarn(@">>>>>> Warn\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
+//#define CZLogInfo(frmt, ...)        DDLogInfo(@">>>>>> Info\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
+//#define CZLogDebug(frmt, ...)       DDLogDebug(@">>>>>> Debug\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
+//#define CZLogVerbose(frmt, ...)     DDLogVerbose(@">>>>>> Verbose\n%s - line【%d】\n%@\n\n",__func__, __LINE__, [NSString stringWithFormat:frmt, ##__VA_ARGS__]);
 
 /**
  Error: 错误信息
