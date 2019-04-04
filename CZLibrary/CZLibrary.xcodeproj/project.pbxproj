@@ -207,6 +207,72 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		841A51DB2255D3BD00367BF9 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A112152580E00D3697D /* UIColor+cz.h */,
+				84B00A182152580E00D3697D /* UIColor+cz.m */,
+				84B00A0F2152580E00D3697D /* UIFont+cz.h */,
+				84B00A192152580E00D3697D /* UIFont+cz.m */,
+				84B00A1A2152580E00D3697D /* UIImage+cz.h */,
+				84B00A142152580E00D3697D /* UIImage+cz.m */,
+				84B00A1C2152580E00D3697D /* UINavigationController+cz.h */,
+				84B00A162152580E00D3697D /* UINavigationController+cz.m */,
+				84B00A1B2152580E00D3697D /* UIScrollView+cz.h */,
+				84B00A132152580E00D3697D /* UIScrollView+cz.m */,
+				84B00A1D2152580E00D3697D /* UIView+cz.h */,
+				84B00A152152580E00D3697D /* UIView+cz.m */,
+				84B00A122152580E00D3697D /* UIWindow+cz.h */,
+				84B00A172152580E00D3697D /* UIWindow+cz.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		841A51DD2255D3F800367BF9 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				847965112181A97D002290DF /* NSArray+cz.h */,
+				847965122181A97D002290DF /* NSArray+cz.m */,
+				8428A2CA21DF03200076DEC9 /* NSDate+cz.h */,
+				8428A2CB21DF03200076DEC9 /* NSDate+cz.m */,
+				8479650E2181A3B2002290DF /* NSDictionary+cz.h */,
+				8479650F2181A3B2002290DF /* NSDictionary+cz.m */,
+				84B00A082152568200D3697D /* NSMutableDictionary+cz.h */,
+				84B00A0B2152568200D3697D /* NSMutableDictionary+cz.m */,
+				840922E6215E04BA00A089A6 /* NSObject+cz.h */,
+				840922E7215E04BA00A089A6 /* NSObject+cz.m */,
+				84B00A072152568200D3697D /* NSString+cz.h */,
+				84B00A0A2152568200D3697D /* NSString+cz.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		841A51E02255D44000367BF9 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A292153343400D3697D /* CZAdaptTool.h */,
+				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
+				84B00A2A2153343400D3697D /* CZDateTransform.h */,
+				84B00A2D2153343400D3697D /* CZDateTransform.m */,
+				8425A42D21D0B33A0088EE73 /* CZDevice.h */,
+				8425A42E21D0B33A0088EE73 /* CZDevice.m */,
+				84B00A272153343400D3697D /* CZLog.h */,
+				84B00A2B2153343400D3697D /* CZLog.m */,
+				84B00A2C2153343400D3697D /* CZRandom.h */,
+				84B00A282153343400D3697D /* CZRandom.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		841A51E12255D45600367BF9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84B00A342153344700D3697D /* CZOnePixelView.h */,
+				84B00A352153344700D3697D /* CZOnePixelView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		8479650A21819D7F002290DF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,11 +357,11 @@
 				84B00A662153370000D3697D /* CZToolsHeader.h */,
 				84B00A672153374F00D3697D /* CZUIHeader.h */,
 				84B00A102152580E00D3697D /* CZUIKitHeader.h */,
+				841A51E12255D45600367BF9 /* UI */,
+				841A51E02255D44000367BF9 /* Tool */,
+				841A51DD2255D3F800367BF9 /* Foundation */,
+				841A51DB2255D3BD00367BF9 /* UIKit */,
 				84B00A65215334B100D3697D /* Assets */,
-				84B00A7E2153501000D3697D /* FoundationCategory */,
-				84B00A802153507100D3697D /* Tools */,
-				84B00A85215350BB00D3697D /* UI */,
-				84B00A892153542700D3697D /* UIKitCategory */,
 			);
 			path = Lbirary;
 			sourceTree = "<group>";
@@ -347,72 +413,6 @@
 				84B00A522153346200D3697D /* Main */,
 			);
 			path = Store;
-			sourceTree = "<group>";
-		};
-		84B00A7E2153501000D3697D /* FoundationCategory */ = {
-			isa = PBXGroup;
-			children = (
-				847965112181A97D002290DF /* NSArray+cz.h */,
-				847965122181A97D002290DF /* NSArray+cz.m */,
-				8428A2CA21DF03200076DEC9 /* NSDate+cz.h */,
-				8428A2CB21DF03200076DEC9 /* NSDate+cz.m */,
-				8479650E2181A3B2002290DF /* NSDictionary+cz.h */,
-				8479650F2181A3B2002290DF /* NSDictionary+cz.m */,
-				84B00A082152568200D3697D /* NSMutableDictionary+cz.h */,
-				84B00A0B2152568200D3697D /* NSMutableDictionary+cz.m */,
-				840922E6215E04BA00A089A6 /* NSObject+cz.h */,
-				840922E7215E04BA00A089A6 /* NSObject+cz.m */,
-				84B00A072152568200D3697D /* NSString+cz.h */,
-				84B00A0A2152568200D3697D /* NSString+cz.m */,
-			);
-			name = FoundationCategory;
-			sourceTree = "<group>";
-		};
-		84B00A802153507100D3697D /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				84B00A292153343400D3697D /* CZAdaptTool.h */,
-				84B00A2E2153343400D3697D /* CZAdaptTool.m */,
-				84B00A2A2153343400D3697D /* CZDateTransform.h */,
-				84B00A2D2153343400D3697D /* CZDateTransform.m */,
-				8425A42D21D0B33A0088EE73 /* CZDevice.h */,
-				8425A42E21D0B33A0088EE73 /* CZDevice.m */,
-				84B00A272153343400D3697D /* CZLog.h */,
-				84B00A2B2153343400D3697D /* CZLog.m */,
-				84B00A2C2153343400D3697D /* CZRandom.h */,
-				84B00A282153343400D3697D /* CZRandom.m */,
-			);
-			name = Tools;
-			sourceTree = "<group>";
-		};
-		84B00A85215350BB00D3697D /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				84B00A342153344700D3697D /* CZOnePixelView.h */,
-				84B00A352153344700D3697D /* CZOnePixelView.m */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		84B00A892153542700D3697D /* UIKitCategory */ = {
-			isa = PBXGroup;
-			children = (
-				84B00A112152580E00D3697D /* UIColor+cz.h */,
-				84B00A182152580E00D3697D /* UIColor+cz.m */,
-				84B00A0F2152580E00D3697D /* UIFont+cz.h */,
-				84B00A192152580E00D3697D /* UIFont+cz.m */,
-				84B00A1A2152580E00D3697D /* UIImage+cz.h */,
-				84B00A142152580E00D3697D /* UIImage+cz.m */,
-				84B00A1C2152580E00D3697D /* UINavigationController+cz.h */,
-				84B00A162152580E00D3697D /* UINavigationController+cz.m */,
-				84B00A1B2152580E00D3697D /* UIScrollView+cz.h */,
-				84B00A132152580E00D3697D /* UIScrollView+cz.m */,
-				84B00A1D2152580E00D3697D /* UIView+cz.h */,
-				84B00A152152580E00D3697D /* UIView+cz.m */,
-				84B00A122152580E00D3697D /* UIWindow+cz.h */,
-				84B00A172152580E00D3697D /* UIWindow+cz.m */,
-			);
-			name = UIKitCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CZLibrary"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "cz self library summary"
   s.description  = "cz self library description"
   s.homepage     = "https://github.com/JuYiWei/CZLibrary"
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 # 资源
   s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git", :tag => "#{s.version}" }
 
-  s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}"
+  s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}", "CZLibrary/CZLibrary/Lbirary/*/*.{h,m}"
   # s.subspec 'Category' do |ss1|
   #   ss1.subspec 'UIKit' do |sss11|
   #     sss11.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/UIKit/*.{h,m}"
