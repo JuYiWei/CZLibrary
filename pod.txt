@@ -7,3 +7,7 @@ pod trunk push CZLibrary.podspec
 
 pod spec lint CZLibrary.podspec --use-libraries --allow-warnings
 pod trunk push CZLibrary.podspec --use-libraries --allow-warnings
+
+
+
+pod trunk push CZLibraryTest.podspec --use-libraries --allow-warnings
