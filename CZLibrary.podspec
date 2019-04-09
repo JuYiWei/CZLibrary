@@ -13,7 +13,9 @@ Pod::Spec.new do |s|
 # 资源
   s.source       = { :git => "https://github.com/JuYiWei/CZLibrary.git", :tag => "#{s.version}" }
 
-  s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}", "CZLibrary/CZLibrary/Lbirary/*/*.{h,m}"
+
+  s.source_files  = "CZLibrary/CZLibrary/Lbirary/*.{h,m}"
+  #, "CZLibrary/CZLibrary/Lbirary/*/*.{h,m}"
   s.subspec 'Category' do |ss1|
     ss1.subspec 'UIKit' do |sss1|
       sss1.source_files  = "CZLibrary/CZLibrary/Lbirary/Category/UIKit/*.{h,m}"
